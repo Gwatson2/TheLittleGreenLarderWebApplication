@@ -69,6 +69,21 @@ h2{
   height:275px;
 }
 
+#articleimage{
+  width: 465px;
+  height:270px;
+}
+
+#alerttext{
+  font-size: 12px;
+}
+
+.right{
+  font-size:16px;
+  text-align:right;
+  color:#B4B8C5;
+}
+
 .card{
   padding:5px;
 }
