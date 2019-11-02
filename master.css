@@ -1,5 +1,6 @@
 body {
   font-family: "Lato", sans-serif;
+  font-size: 15px;
 }
 
 h2{
@@ -42,7 +43,10 @@ h2{
 #aboutus{
   background-color: #329E62;
   font-size: 18px;
+}
 
+#events{
+  background-color:#81CEA2;
 }
 
 #images {
@@ -51,6 +55,11 @@ h2{
 
 #collection{
   padding:5px;
+}
+
+#cardpic{
+  width:275px;
+  height:275px;
 }
 
 .card{
