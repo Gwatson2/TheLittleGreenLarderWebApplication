@@ -80,6 +80,7 @@ ul{
   height:275px;
 }
 
+
 #articleimage{
   width: 465px;
   height:270px;
@@ -93,6 +94,15 @@ ul{
   font-size:16px;
   text-align:right;
   color:#B4B8C5;
+
+#fbicon{
+  color:#1877F2;
+  padding: 5px;
+}
+
+#ig{
+  padding:5px;
+  color:#D52F87;
 }
 
 .card{
