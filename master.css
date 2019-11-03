@@ -60,6 +60,10 @@ h2{
     padding-left: 160px;
 }
 
+#nesnav{
+  font-size:17px;
+}
+
 #collection{
   padding:5px;
 }
@@ -67,6 +71,16 @@ h2{
 #cardpic{
   width:275px;
   height:275px;
+}
+
+#fbicon{
+  color:#1877F2;
+  padding: 5px;
+}
+
+#ig{
+  padding:5px;
+  color:#D52F87;
 }
 
 .card{

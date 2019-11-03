@@ -3,18 +3,26 @@
   <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="master.css">
+    <script src="https://kit.fontawesome.com/efa804cdca.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Little Green Larder</title>
   </head>
   <body>
 
     <div class="sidenav">
-      <a href="index.html">Home</a>
-      <a href="map.html">Map</a>
-      <a href="recipe.html">Recipe</a>
-      <a href="advice.html">Advice</a>
+      <a class="nav-link" href="index.html">Home</a>
+       <nav class="nav nav-pills flex-column">
+      <a class="nav-link ml-3 my-1" id="nesnav" href="#aboutus">About Us</a>
+      <a class="nav-link ml-3 my-1" id="nesnav" href="#events">Upcoming Events</a>
+      <a class="nav-link ml-3 my-1" id="nesnav" href="#article">Article</a>
+      <a class="nav-link ml-3 my-1" id="nesnav" href="#openingtimes">Opening times</a>
+      <a class="nav-link" href="map.html">Map</a>
+      <a class="nav-link" href="recipe.html">Recipe</a>
+      <a class="nav-link" href="advice.html">Advice</a>
+    </nav>
     </div>
     <div class="main">
+
       <div class="container" id="aboutus">
         <div class="row">
           <div class="col-sm-2">
@@ -66,6 +74,7 @@
   </div>
   <br>
   </div>
+
   <div class="container" id="events">
     <h2 class="centretext">Upcoming Events!!</h2>
       <div class="row">
@@ -171,8 +180,17 @@ Networking</p>
     </tr>
   </tbody>
 </table>
-    </div>
+</div>
+<div class="container float-right" id="socials">
+  <a href="https://www.facebook.com/thelittlegreenlarder/" class="fab fa-facebook float-right fa-2x" id="fbicon"></a>
+  <a href="https://www.instagram.com/thegreenlarder/?hl=en" class="fab fa-instagram float-right fa-2x" id="ig"></a>
+</div>
   </div>
 
   </body>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </html>
