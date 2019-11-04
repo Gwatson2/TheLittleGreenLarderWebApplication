@@ -10,6 +10,13 @@ h2{
   padding: 5px;
 }
 
+ul{
+  font-size:20px;
+}
+
+.aboutus{
+  font-size:20px;
+}
 .centretext{
   text-align: center;
 }
@@ -42,7 +49,9 @@ h2{
   padding-left:160px;
 }
 
-
+.about{
+  font-size:20px;
+}
 #openingtimes {
   font-size: 12px;
 }
@@ -71,6 +80,22 @@ h2{
 #cardpic{
   width:275px;
   height:275px;
+}
+
+
+#articleimage{
+  width: 465px;
+  height:270px;
+}
+
+#alerttext{
+  font-size: 12px;
+}
+
+.right{
+  font-size:16px;
+  text-align:right;
+  color:#B4B8C5;
 }
 
 #fbicon{
