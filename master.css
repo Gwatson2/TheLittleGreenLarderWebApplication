@@ -3,9 +3,14 @@ body {
   font-size: 15px;
 }
 
+footer {
+  text-align: center;
+}
+
 p{
  font-size:15px;
 }
+
 h2{
   padding: 5px;
   font-family: 'Bungee Inline', cursive;
@@ -53,6 +58,12 @@ ul{
 .about{
   font-size:20px;
 }
+
+.important{
+color: #329E62;
+font-size: 15px;
+}
+
 #openingtimes {
   font-size: 12px;
 }
@@ -60,6 +71,10 @@ ul{
 #aboutus{
   background-color: #329E62;
   font-size: 18px;
+}
+
+#quizbtn{
+  padding: 10px;
 }
 
 #events{
