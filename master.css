@@ -7,6 +7,7 @@ p{
  font-size:15px;
 }
 h2{
+  font-family: 'Bungee Inline', cursive;
   padding: 5px;
 }
 
@@ -45,6 +46,15 @@ ul{
   color: #f1f1f1;
 }
 
+.map-body{
+  padding-left: 25%;
+}
+
+.map{
+  height:60px;
+  width:100%;
+  padding-left:25%;
+}
 .container{
   padding-left:160px;
 }
