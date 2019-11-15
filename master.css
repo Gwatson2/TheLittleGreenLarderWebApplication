@@ -3,12 +3,25 @@ body {
   font-size: 15px;
 }
 
+footer {
+  text-align: center;
+}
+
 p{
  font-size:15px;
+ font-family: 'Roboto', sans-serif;
 }
+
 h2{
   font-family: 'Bungee Inline', cursive;
   padding: 5px;
+  font-family: 'Bungee Inline', cursive;
+}
+
+h3{
+  padding: 5px;
+  font-family: 'Bungee Inline', cursive;
+  font-size: 20px;
 }
 
 ul{
@@ -62,6 +75,13 @@ ul{
 .about{
   font-size:20px;
 }
+
+.important{
+color: #329E62;
+font-size: 17px;
+font-family: 'Bungee Inline', cursive;
+}
+
 #openingtimes {
   font-size: 12px;
 }
@@ -69,6 +89,10 @@ ul{
 #aboutus{
   background-color: #329E62;
   font-size: 18px;
+}
+
+#quizbtn{
+  padding: 10px;
 }
 
 #events{
@@ -102,10 +126,27 @@ ul{
   font-size: 12px;
 }
 
+#footer{
+
+}
+
 .right{
   font-size:16px;
   text-align:right;
   color:#B4B8C5;
+}
+
+#header{
+  background-color: #329E62;
+  height:100px;
+  padding-left: 190px;
+}
+
+#repurpose{
+  padding-left: 40px;
+}
+#advice{
+  padding-bottom: 20px;
 }
 
 #fbicon{
