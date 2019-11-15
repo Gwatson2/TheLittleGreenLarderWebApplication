@@ -70,6 +70,7 @@ ul{
 color: #329E62;
 font-size: 17px;
 font-family: 'Bungee Inline', cursive;
+padding:0;
 }
 
 #openingtimes {
@@ -83,6 +84,10 @@ font-family: 'Bungee Inline', cursive;
 
 #quizbtn{
   padding: 10px;
+}
+
+#advicelist{
+  padding:2px;
 }
 
 #events{
