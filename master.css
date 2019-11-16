@@ -76,6 +76,10 @@ font-family: 'Bungee Inline', cursive;
 padding:0;
 }
 
+.links{
+  color: #81CEA2;
+}
+
 #openingtimes {
   font-size: 12px;
 }
@@ -130,11 +134,10 @@ background-color: #818181;
 background-color: #818181;
  bottom: 0;
  width: 100%;
- height:50px;
+ height:100px;
  text-align: center;
  margin: 0;
- 
-
+padding-left:160px;
 }
 
 }
