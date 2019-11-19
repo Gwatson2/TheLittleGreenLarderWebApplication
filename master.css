@@ -43,6 +43,10 @@ ul{
   text-align: center;
 }
 
+.quizbody{
+  background-color:#81CEA2;
+}
+
 .sidenav {
   height: 100%;
   width: 160px;
@@ -211,6 +215,53 @@ padding-left:160px;
 
 #contact{
   padding-right: 40px;
+}
+
+#quizhead{
+text-align: center;
+font-family: 'Bungee Inline', cursive;
+ padding-left: 140px;
+ padding-right: 100px;
+}
+
+.result{    // css for the result of the quiz
+text-align: center;
+  font-size: 15px;
+  font-size: 50px;
+padding-left: 170px;
+}
+
+.question{    //css for the quiz questions
+  font-size: 15px;
+  font-weight: 800;
+  font-family: 'Bungee Inline', cursive;
+}
+#quizcon{   // the quiz is contained in this container
+  position: relative;
+  height: 550px;
+  width:700px;
+  margin-top: 40px;
+  padding-left: 10px;
+  padding-bottom: 200px;
+  margin-left: 300px;
+  background-color: white;
+}
+
+#resultcon{
+  font-family: 'Bungee Inline', cursive;
+  background-color: #329E62;
+  margin-left:300px;
+  width:700px;
+}
+
+#quiz{
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-bottom: 0;
+}
+
+.quiz{
+  text-align: center;
 }
 
 .second{
