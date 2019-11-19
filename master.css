@@ -218,11 +218,13 @@ padding-left:160px;
 #fbicon{
   color:#1877F2;
   padding: 5px;
+  height:20px;
 }
 
 #ig{
   padding:5px;
   color:#D52F87;
+  height: 20px;
 }
 
 #contact{
@@ -250,19 +252,19 @@ padding-left: 170px;
 }
 #quizcon{   // the quiz is contained in this container
   position: relative;
-  height: 550px;
+  height: 490px;
   width:700px;
   margin-top: 40px;
   padding-left: 10px;
   padding-bottom: 200px;
-  margin-left: 300px;
+  margin-left: 340px;
   background-color: white;
 }
 
 #resultcon{
   font-family: 'Bungee Inline', cursive;
   background-color: #329E62;
-  margin-left:300px;
+  margin-left:340px;
   width:700px;
 }
 
