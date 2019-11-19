@@ -59,6 +59,11 @@ ul{
   padding-top: 20px;
 }
 
+.break{
+  background-color: #818181;
+  height: 4px;
+}
+
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
@@ -103,6 +108,10 @@ padding:0;
 
 #socials{
   float: left;
+}
+
+#advicebtn{
+  float:right;
 }
 
 #adviceimg2
