@@ -62,7 +62,6 @@ ul{
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 25px;
   color: #818181;
   display: block;
 }
@@ -94,6 +93,9 @@ padding:0;
   font-size: 12px;
 }
 
+#navitem{
+  font-size: 25px;
+}
 #adviceimg
 {
   padding-right: 10px;
@@ -155,8 +157,9 @@ padding-left:160px;
 }
 
 }
-#nesnav{
-  font-size:17px;
+#nesnavs{
+  font-size:10px;
+  padding-top: 2px;
 }
 
 #collection{
