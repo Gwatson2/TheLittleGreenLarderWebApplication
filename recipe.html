@@ -36,7 +36,7 @@
             <button type="button" onclick="recipe1()" class="btn btn-outline-success">Sweet Potato & Chick Pea Curry</button>
           </li>
           <li class="list-inline border-0">
-            <button type="button" class="btn btn-outline-success">Garlic, Chilli & Veg Stir Fry</button>
+            <button type="button" onclick="recipe2()" class="btn btn-outline-success">Garlic, Chilli & Veg Stir Fry</button>
           </li>
           <li class="list-inline border-0">
             <button type="button" class="btn btn-outline-success">Vegan Chilli, Guacamole & Rice</button>
@@ -78,10 +78,23 @@
   function recipe1() {
     var x = document.getElementById("default");
 
-    var firstRecipe = "<h3>Sweet Potato and Chick Pea Curry Bag (Serves 2)</h3> <strong>Ingredients</strong> <br> 2-3 cloves of garlic <br> 2 tbsp curry paste <br> 1 tsp curry powder <br> 1 onion <br> 1 sweet potato <br> 1 carrot <br> 200g chick peas <br> 1 can of coconut milk <br> 150g rice <br> <br> <ol> <li>Soak the chickpeas for 4 to 8 hours (you may wish to just leave them overnight), rinse them and then place them in a pot of water. Bring the water to boil and them simmer them for 1 hour. Drain them and set them aside.</li> <li>Peel and chop your cloves garlic and you vegetables.</li> <li>Fry your onions and garlic in oil for 1 minute and then add the curry paste and fry for a further 2 minutes.</li> <li>Add the can of coconut milk, stir and then add your sweet potato and the chick peas, then cook for 10 minutes.</li> <li>Add the carrots and cook for a further 10-15 minutes</li> <li>Serve with rice.</li> </ol>";
+    var firstRecipe = "<h3>Sweet Potato and Chick Pea Curry Bag (Serves 2)</h3> <strong>Ingredients</strong> <br> 2-3 cloves of garlic <br> 2 tbsp curry paste <br> 1 tsp curry powder <br> 1 onion <br> 1 sweet potato <br> 1 carrot <br> 200g chick peas <br> 1 can of coconut milk <br> 150g rice <br> <br> <ol> <li>Soak the chickpeas for 4 to 8 hours (you may wish to just leave them overnight), rinse them and then place them in a pot of water. Bring the water to boil and them simmer them for 1 hour. Drain them and set them aside.</li> <li>Peel and chop your cloves garlic and you vegetables.</li> <li>Fry your onions and garlic in oil for 1 minute and then add the curry paste and fry for a further 2 minutes.</li> <li>Add the can of coconut milk, stir and then add your sweet potato and the chick peas, then cook for 10 minutes.</li> <li>Add the carrots and cook for a further 10-15 minutes</li> <li>Serve with rice and enjoy!</li> </ol> <br>";
 
     if (x.innerHTML !== firstRecipe){
       x.innerHTML = firstRecipe;
+    } else {
+      x.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+    }
+  }
+
+  //Javascript for the changing of the contents of the card to the second recipe1
+  function recipe2() {
+    var x = document.getElementById("default");
+
+    var secondRecipe = "<h3>Garlic, Chilli and Vegetable Stir Fry (Serves 2)</h3> <strong>Ingredients</strong> <br> 2-4 cloves of garlic <br> 1 chilli <br> 2 noodle vests <br> 1 onion <br> 1 carrot <br> 1 pepper <br> 1 courgette <br> Soy sauce <br> <br> <ol> <li>Chop the garlic and the chilli (you can include the seeds if you wish, for extra spice) and slice the pepper and onion. Use a vegetable peeler to ribbon the whole carrot and courgette, though if you don't have a peeler you can just chop them.</li> <li>Boil the noodles in water, drain them and set them aside.</li> <li>In a wok, fry the garlic and the chilli in oil for 1 minute, add in the onions and fry for 1 minute.</li> <li>Add the rest of the vegetables and fry for 5 minutes</li> <li>Add the noodles and the soy sauce and then stir fry until the noodles are hot</li> <li>Serve and enjoy!</li> </ol> <br>";
+
+    if (x.innerHTML !== secondRecipe){
+      x.innerHTML = secondRecipe;
     } else {
       x.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
     }
