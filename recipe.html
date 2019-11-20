@@ -36,7 +36,7 @@
 
           <ul class="nav justify-content-center">
             <li class="nav-item">
-              <button type="button" onclick="recipe1()" class="btn btn-outline-success">Recipe 1</button>
+              <button type="button" onclick="recipe1()" class="btn btn-outline-success">Sweet Potato and Chick Pea Curry Bag</button>
             </li>
             <li class="nav-item">
               <button type="button" class="btn btn-outline-success">Recipe 2</button>
@@ -75,12 +75,16 @@
 
 <script>
 
-  // Javascript for the changing the contents of the card
+  // Javascript for the changing the contents of the card to the first recipe
   function recipe1() {
     var x = document.getElementById("default");
-    var firstRecipe = "Placeholder text for first recipe."
+
+    var firstRecipe = "<h3>Sweet Potato and Chick Pea Curry Bag (Serves 2)</h3> <strong>Ingredients</strong> <br> 2-3 cloves of garlic <br> 2 tbsp curry paste <br> 1 tsp curry powder <br> 1 onion <br> 1 sweet potato <br> 1 carrot <br> 200g chick peas <br> 1 can of coconut milk <br> 150g rice <br> <br> <ol> <li>Soak the chickpeas for 4 to 8 hours (you may wish to just leave them overnight), rinse them and then place them in a pot of water. Bring the water to boil and them simmer them for 1 hour. Drain them and set them aside.</li> <li>Peel and chop your cloves garlic and you vegetables.</li> <li>Fry your onions and garlic in oil for 1 minute and then add the curry paste and fry for a further 2 minutes.</li> <li>Add the can of coconut milk, stir and then add your sweet potato and the chick peas, then cook for 10 minutes.</li> <li>Add the carrots and cook for a further 10-15 minutes</li> <li>Serve with rice.</li> </ol>";
+
     if (x.innerHTML !== firstRecipe){
       x.innerHTML = firstRecipe;
+    } else {
+      x.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
     }
   }
 
