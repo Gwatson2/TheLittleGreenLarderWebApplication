@@ -27,6 +27,12 @@ h3{
   font-size: 20px;
 }
 
+h4{
+  padding: 5px;
+  font-family: 'Bungee Inline', cursive;
+  font-size: 16px;
+}
+
 ul{
   font-size:20px;
 }
@@ -36,6 +42,10 @@ ul{
 }
 .centretext{
   text-align: center;
+}
+
+.quizbody{
+  background-color:#81CEA2;
 }
 
 .sidenav {
@@ -50,10 +60,14 @@ ul{
   padding-top: 20px;
 }
 
+.break{
+  background-color: #818181;
+  height: 4px;
+}
+
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 25px;
   color: #818181;
   display: block;
 }
@@ -94,9 +108,20 @@ padding:0;
   font-size: 12px;
 }
 
+#navitem{
+  font-size: 25px;
+}
 #adviceimg
 {
   padding-right: 10px;
+}
+
+#socials{
+  float: left;
+}
+
+#advicebtn{
+  float:right;
 }
 
 #adviceimg2
@@ -151,8 +176,9 @@ padding-left:160px;
 }
 
 }
-#nesnav{
-  font-size:17px;
+#nesnavs{
+  font-size:10px;
+  padding-top: 2px;
 }
 
 #collection{
@@ -202,11 +228,68 @@ padding-left:160px;
 #fbicon{
   color:#1877F2;
   padding: 5px;
+  height:20px;
 }
 
 #ig{
   padding:5px;
   color:#D52F87;
+  height: 20px;
+}
+
+#contact{
+  padding-right: 40px;
+}
+
+#quizhead{
+text-align: center;
+font-family: 'Bungee Inline', cursive;
+ padding-left: 140px;
+ padding-right: 100px;
+}
+
+.result{    // css for the result of the quiz
+text-align: center;
+  font-size: 15px;
+  font-size: 50px;
+padding-left: 170px;
+}
+
+.question{    //css for the quiz questions
+  font-size: 15px;
+  font-weight: 800;
+  font-family: 'Bungee Inline', cursive;
+}
+#quizcon{   // the quiz is contained in this container
+  position: relative;
+  height: 490px;
+  width:700px;
+  margin-top: 40px;
+  padding-left: 10px;
+  padding-bottom: 200px;
+  margin-left: 340px;
+  background-color: white;
+}
+
+#resultcon{
+  font-family: 'Bungee Inline', cursive;
+  background-color: #329E62;
+  margin-left:340px;
+  width:700px;
+}
+
+#quiz{
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-bottom: 0;
+}
+
+.quiz{
+  text-align: center;
+}
+
+.second{
+  font-size: 16;
 }
 
 .card{
