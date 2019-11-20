@@ -113,4 +113,17 @@
     }
   }
 
+    // Javascript for the changing the contents of the card to the second recipe
+    function recipe4() {
+      var x = document.getElementById("default");
+
+      var fourthRecipe = "<h3>Cajun Chickpea Burger with Wedges (Serves 2)</h3> <strong>Ingredients</strong> <br> Garlic <br> Onion <br> Carrot <br> Courgette <br> Chickpeas <br> Cajun spices <br> Potato <br> Paprika spice mix <br> <br> <ol> <li>Soak the chickpeas for 4-8 hours (you may wish to just leave them overnight), rinse then place them into a pot of water. Bring the water to boil and then simmer for 1 hour. Drain them and set them aside.</li> <li>Cut the potato(es) into wedges and place on a baking tray. Lightly drizzle over some oil and sprinkle on the wedge spice mix. Cook at 200/gas mark 6 for 15-20 minutes.</li> <li>Grate the carrots and courgette and squeeze any excess water out with a towel or a napkin.</li> <li>Blend or mash the chickpeas until they are coarsely mashed, but not to a paste.</li> <li>Chop the onion and 2-4 cloves of garlic and fry them with the Cajun spice mix for 2-4 minutes.</li> <li>Combine all of the ingredients in a bowl, add some salt and pepper to taste then form them into burgers and fry them in oil for 5 minutes on each side.</li> <li>Serve and enjoy!</li> </ol> <br>";
+
+      if (x.innerHTML !== fourthRecipe){
+        x.innerHTML = fourthRecipe;
+      } else {
+        x.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+      }
+    }
+
 </script>
