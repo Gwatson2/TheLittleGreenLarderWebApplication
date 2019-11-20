@@ -29,14 +29,14 @@
 
     <main>
       <div class="container" id="recipe">
-        <p>These recipe's were provided to us by the owner of The Little Green Larder.</p>
+        <p>All recipe's were provided to us by the owner of The Little Green Larder.</p>
 
         <div class="card">
           <h2>Recipe</h2>
 
           <ul class="nav justify-content-center">
             <li class="nav-item">
-              <button type="button" class="btn btn-outline-success">Recipe 1</button>
+              <button type="button" onclick="recipe1()" class="btn btn-outline-success">Recipe 1</button>
             </li>
             <li class="nav-item">
               <button type="button" class="btn btn-outline-success">Recipe 2</button>
@@ -59,7 +59,9 @@
           </ul>
 
           <div class="card-body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div id="default">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            </div>
 
             <button type="button" class="btn btn-outline-success">View Shopping List</button>
             <button type="button" class="btn btn-outline-success">Add Ingredients to Shopping List</button>
@@ -70,3 +72,16 @@
 
   </body>
 </html>
+
+<script>
+
+  // Javascript for the changing the contents of the card
+  function recipe1() {
+    var x = document.getElementById("default");
+    var firstRecipe = "Placeholder text for first recipe."
+    if (x.innerHTML !== firstRecipe){
+      x.innerHTML = firstRecipe;
+    }
+  }
+
+</script>
