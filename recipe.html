@@ -45,7 +45,7 @@
             <button type="button" onclick="recipe4()" class="btn btn-outline-success">Cajun Chickpea Burger & Wedges</button>
           </li>
           <li class="list-inline border-0">
-            <button type="button" class="btn btn-outline-success">Thai Veg Curry with Noodles</button>
+            <button type="button" onclick="recipe5()" class="btn btn-outline-success">Thai Veg Curry with Noodles</button>
           </li>
           <li class="list-inline border-0">
             <button type="button" class="btn btn-outline-success">Vegan Chilli, Guacamole & Pearl Couscous</button>
@@ -113,17 +113,30 @@
     }
   }
 
-    // Javascript for the changing the contents of the card to the second recipe
-    function recipe4() {
-      var x = document.getElementById("default");
+  // Javascript for the changing the contents of the card to the second recipe
+  function recipe4() {
+  var x = document.getElementById("default");
 
-      var fourthRecipe = "<h3>Cajun Chickpea Burger with Wedges (Serves 2)</h3> <strong>Ingredients</strong> <br> Garlic <br> Onion <br> Carrot <br> Courgette <br> Chickpeas <br> Cajun spices <br> Potato <br> Paprika spice mix <br> <br> <ol> <li>Soak the chickpeas for 4-8 hours (you may wish to just leave them overnight), rinse then place them into a pot of water. Bring the water to boil and then simmer for 1 hour. Drain them and set them aside.</li> <li>Cut the potato(es) into wedges and place on a baking tray. Lightly drizzle over some oil and sprinkle on the wedge spice mix. Cook at 200/gas mark 6 for 15-20 minutes.</li> <li>Grate the carrots and courgette and squeeze any excess water out with a towel or a napkin.</li> <li>Blend or mash the chickpeas until they are coarsely mashed, but not to a paste.</li> <li>Chop the onion and 2-4 cloves of garlic and fry them with the Cajun spice mix for 2-4 minutes.</li> <li>Combine all of the ingredients in a bowl, add some salt and pepper to taste then form them into burgers and fry them in oil for 5 minutes on each side.</li> <li>Serve and enjoy!</li> </ol> <br>";
+  var fourthRecipe = "<h3>Cajun Chickpea Burger with Wedges (Serves 2)</h3> <strong>Ingredients</strong> <br> Garlic <br> Onion <br> Carrot <br> Courgette <br> Chickpeas <br> Cajun spices <br> Potato <br> Paprika spice mix <br> <br> <ol> <li>Soak the chickpeas for 4-8 hours (you may wish to just leave them overnight), rinse then place them into a pot of water. Bring the water to boil and then simmer for 1 hour. Drain them and set them aside.</li> <li>Cut the potato(es) into wedges and place on a baking tray. Lightly drizzle over some oil and sprinkle on the wedge spice mix. Cook at 200/gas mark 6 for 15-20 minutes.</li> <li>Grate the carrots and courgette and squeeze any excess water out with a towel or a napkin.</li> <li>Blend or mash the chickpeas until they are coarsely mashed, but not to a paste.</li> <li>Chop the onion and 2-4 cloves of garlic and fry them with the Cajun spice mix for 2-4 minutes.</li> <li>Combine all of the ingredients in a bowl, add some salt and pepper to taste then form them into burgers and fry them in oil for 5 minutes on each side.</li> <li>Serve and enjoy!</li> </ol> <br>";
 
-      if (x.innerHTML !== fourthRecipe){
-        x.innerHTML = fourthRecipe;
-      } else {
-        x.innerHTML = "<p>When it comes to trying to live a sustainable life, some easy ways to do so are by shopping at a zero waste store (such as The Little Green Larder), buying loose fruit and veg and eating less meat. Here you will find some easy recipes that you can make from products you can purchase from The Little Green Larder which will help you to live a more sustainable life.</p>";
-      }
-    }
+  if (x.innerHTML !== fourthRecipe){
+    x.innerHTML = fourthRecipe;
+  } else {
+    x.innerHTML = "<p>When it comes to trying to live a sustainable life, some easy ways to do so are by shopping at a zero waste store (such as The Little Green Larder), buying loose fruit and veg and eating less meat. Here you will find some easy recipes that you can make from products you can purchase from The Little Green Larder which will help you to live a more sustainable life.</p>";
+  }
+}
+
+// Javascript for the changing the contents of the card to the second recipe
+function recipe5() {
+  var x = document.getElementById("default");
+
+  var fifthRecipe = "<h3>Thai Vegetable Curry with Noodles (Serves 2)</h3> <strong>Ingredients</strong> <br> 2-4 cloves of garlic <br> 2tbsp curry paste <br> 1 tsp ground ginger <br> 1 onion <br> 1 carrot <br> 1 pepper <br> 1 courgette <br> 1 lime <br> 1 chilli <br> Can of coconut milk <br> Noodles <br> <br> <ol> <li>Peel and chop your garlic, chilli and vegetables.</li> <li>Fry the onions, chilli, ground ginger and garlic in oil for 2 minutes.</li> <li>Add in the other vegetables and cook for 5 minutes until they are almost tender.</li> <li>Add the curry paste and cook for another 2 minutes, stirring often.</li> <li>Add the can of coconut milk and cook for up to 10 minutes.</li> <li>Remove from heat and add a squeeze of lime to taste.</li> <li>Boil the noodles in water, drain them and then serve and enjoy!</li> </ol> <br>";
+
+  if (x.innerHTML !== fifthRecipe){
+    x.innerHTML = fifthRecipe;
+  } else {
+    x.innerHTML = "<p>When it comes to trying to live a sustainable life, some easy ways to do so are by shopping at a zero waste store (such as The Little Green Larder), buying loose fruit and veg and eating less meat. Here you will find some easy recipes that you can make from products you can purchase from The Little Green Larder which will help you to live a more sustainable life.</p>";
+  }
+}
 
 </script>
