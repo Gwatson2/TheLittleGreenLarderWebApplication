@@ -48,7 +48,7 @@
             <button type="button" onclick="recipe5()" class="btn btn-outline-success">Thai Veg Curry with Noodles</button>
           </li>
           <li class="list-inline border-0">
-            <button type="button" class="btn btn-outline-success">Vegan Chilli, Guacamole & Pearl Couscous</button>
+            <button type="button" onclick="recipe6()" class="btn btn-outline-success">Vegan Chilli, Guacamole & Pearl Couscous</button>
           </li>
           <li class="list-inline border-0">
             <button type="button" class="btn btn-outline-success">Falafel Burgers, Guacamole & Salad</button>
@@ -113,7 +113,7 @@
     }
   }
 
-  // Javascript for the changing the contents of the card to the second recipe
+  // Javascript for the changing the contents of the card to the fourth recipe
   function recipe4() {
   var x = document.getElementById("default");
 
@@ -126,7 +126,7 @@
   }
 }
 
-// Javascript for the changing the contents of the card to the second recipe
+// Javascript for the changing the contents of the card to the fifth recipe
 function recipe5() {
   var x = document.getElementById("default");
 
@@ -134,6 +134,19 @@ function recipe5() {
 
   if (x.innerHTML !== fifthRecipe){
     x.innerHTML = fifthRecipe;
+  } else {
+    x.innerHTML = "<p>When it comes to trying to live a sustainable life, some easy ways to do so are by shopping at a zero waste store (such as The Little Green Larder), buying loose fruit and veg and eating less meat. Here you will find some easy recipes that you can make from products you can purchase from The Little Green Larder which will help you to live a more sustainable life.</p>";
+  }
+}
+
+// Javascript for the changing the contents of the card to the sixth recipe
+function recipe6() {
+  var x = document.getElementById("default");
+
+  var sixthRecipe = "<h3>Vegan Chilli, Guacamole and Pearl Couscous (Serves 2)</h3> <strong>Chilli Ingredients</strong> <br> Chopped tomatoes <br> 3/4 onion <br> Pepper <br> Bean mix, TVP mince <br> Chickpeas <br> 1/2 chilli <br> Spice mix <br> 2-4 cloves of garlic <br> Pearl couscous <br> <strong>Guacamole Ingredients</strong> <br> Tomato <br> Avocado <br> 1-2 cloves of garlic <br> Lime <br> 1/2 chilli <br> 1/4 onion <br> <br> <ol> <li>Soak the bean mix for 4-8 hours (you may wish to just leave them overnight), rinse then place in a pot of water. Bring to boil and them simmer for 1 hour. Drain and then set aside. Soak the TVP mince for 10 minutes, drain and then set aside.</li> <li>Chop the onion, 4-6 cloves of garlic, chilli and pepper. Fry 2-4 cloves of garlic, 3/4 onion and spices in oil for 2-4 minutes (you may wish to add 1/2 chilli for some extra spice). Add pepper and fry for a further 5 minutes.</li> <li>Add the TVP mince and bean mix, as well as the can of chopped tomatoes and cook for 20-30 minutes, use salt and pepper to taste and serve with couscous.</li> <li>For the guacamole, mash avocado and mix with 1-2 cloves of garlic, 1/4 of the onion, fresh tomatoes, the other 1/2 of the chilli and squeeze 1/2 of the lime juice in. Use salt and peper to taste.</li> <li>Serve and enjoy!</li> </ol> <br>";
+
+  if (x.innerHTML !== sixthRecipe){
+    x.innerHTML = sixthRecipe;
   } else {
     x.innerHTML = "<p>When it comes to trying to live a sustainable life, some easy ways to do so are by shopping at a zero waste store (such as The Little Green Larder), buying loose fruit and veg and eating less meat. Here you will find some easy recipes that you can make from products you can purchase from The Little Green Larder which will help you to live a more sustainable life.</p>";
   }
