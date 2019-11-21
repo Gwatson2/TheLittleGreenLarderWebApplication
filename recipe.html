@@ -51,7 +51,7 @@
             <button type="button" onclick="recipe6()" class="btn btn-outline-success">Vegan Chilli, Guacamole & Pearl Couscous</button>
           </li>
           <li class="list-inline border-0">
-            <button type="button" class="btn btn-outline-success">Falafel Burgers, Guacamole & Salad</button>
+            <button type="button" onclick="recipe7()" class="btn btn-outline-success">Falafel Burgers, Guacamole & Salad</button>
           </li>
         </ul>
 
@@ -147,6 +147,19 @@ function recipe6() {
 
   if (x.innerHTML !== sixthRecipe){
     x.innerHTML = sixthRecipe;
+  } else {
+    x.innerHTML = "<p>When it comes to trying to live a sustainable life, some easy ways to do so are by shopping at a zero waste store (such as The Little Green Larder), buying loose fruit and veg and eating less meat. Here you will find some easy recipes that you can make from products you can purchase from The Little Green Larder which will help you to live a more sustainable life.</p>";
+  }
+}
+
+// Javascript for the changing the contents of the card to the seventh recipe
+function recipe7() {
+  var x = document.getElementById("default");
+
+  var seventhRecipe = "<h3>Falafel Burgers, Guacamole and Salad (Serves 2)</h3> <strong>Ingredients</strong> <br> Falafel mix <br> 2 rolls <br> Avocado <br> Garlic <br> Lime <br> Chilli <br> Courgette <br> Red onion <br> Cherry tomatoes <br> Carrot <br> <br> <ol> <li>Add water 1tbsp at a time to the falafel mix until it holds together then set it aside for 10 minutes before shaping them into 2 patties.</li> <li>Use a vegetable peeler to ribbon the carrot and courgette, chop the onion and half of the cherry tomatoes. Mix in a bowl (add 1/2 chilli if you want to add a little bit of spice) and squeezde 1/2 of a lime over, then use salt and pepper to taste.</li> <li>For guacamole, mash the avocado, mix with 1-2 cloves of garlic, 1/4 of the onion, chopped fresh tomatoes, 1/2 of the chilli and squeeze 1/2 of the lime juice in. Use salt and pepper to taste.</li> <li>Fry the falafel burgers in oil for a few minutes on each size and then serve on rolls and enjoy!</li> </ol> <br>";
+
+  if (x.innerHTML !== seventhRecipe){
+    x.innerHTML = seventhRecipe;
   } else {
     x.innerHTML = "<p>When it comes to trying to live a sustainable life, some easy ways to do so are by shopping at a zero waste store (such as The Little Green Larder), buying loose fruit and veg and eating less meat. Here you will find some easy recipes that you can make from products you can purchase from The Little Green Larder which will help you to live a more sustainable life.</p>";
   }
