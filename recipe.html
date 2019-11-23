@@ -213,8 +213,17 @@ function shoppingList() {
 // Javascript for the button which will update the shopping list with new ingredients
 function updateList() {
   var x = document.getElementById("default");
-
+    if (x.innerHTML === firstRecipe){
+      garlic = garlic + 3;
+      curryPaste = curryPaste + 1;
+      curryPowder = curryPowder + 1;
+      onion = onion + 1;
+      sweetPotato = sweetPotato + 1;
+      carrot = carrot + 1;
+      chickpeas = chickpeas + 200; //g
+      coconutMilk = coconutMilk + 1; //cans
+      rice = rice + 150; //g
+    }
   }
-}
 
 </script>
