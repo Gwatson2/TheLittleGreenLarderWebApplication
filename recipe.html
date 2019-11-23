@@ -76,6 +76,153 @@
                 <td>Garlic</td>
                 <td id="garlic"></td>
               </tr>
+
+              <tr>
+                <td>Curry Paste</td>
+                <td id="curryPaste"></td>
+              </tr>
+
+              <tr>
+                <td>Curry Powder</td>
+                <td id="curryPowder"></td>
+              </tr>
+
+              <tr>
+                <td>Onions</td>
+                <td id="onion"></td>
+              </tr>
+
+              <tr>
+                <td>Sweet Potatos</td>
+                <td id="sweetPotato"></td>
+              </tr>
+
+              <tr>
+                <td>Carrots</td>
+                <td id="carrot"></td>
+              </tr>
+
+              <tr>
+                <td>Chickpeas (g)</td>
+                <td id="chickpeas"></td>
+              </tr>
+
+              <tr>
+                <td>Cans of Coconut Milk</td>
+                <td id="coconutMilk"></td>
+              </tr>
+
+              <tr>
+                <td>Rice (g)</td>
+                <td id="rice"></td>
+              </tr>
+
+              <tr>
+                <td>Chilli's</td>
+                <td id="chilli"></td>
+              </tr>
+
+              <tr>
+                <td>Noodle Vests</td>
+                <td id="noodleVests"></td>
+              </tr>
+
+              <tr>
+                <td>Peppers</td>
+                <td id="pepper"></td>
+              </tr>
+
+              <tr>
+                <td>Courgettes</td>
+                <td id="courgette"></td>
+              </tr>
+
+              <tr>
+                <td>Soy Sauce</td>
+                <td id="soySauce"></td>
+              </tr>
+
+              <tr>
+                <td>Tomatos</td>
+                <td id="tomato"></td>
+              </tr>
+
+              <tr>
+                <td>Kidney Beans</td>
+                <td id="kidneyBeans"></td>
+              </tr>
+
+              <tr>
+                <td>Black Eye Beans</td>
+                <td id="blackEyeBeans"></td>
+              </tr>
+
+              <tr>
+                <td>Spice Mix</td>
+                <td id="spiceMix"></td>
+              </tr>
+
+              <tr>
+                <td>Avocados</td>
+                <td id="avocado"></td>
+              </tr>
+
+              <tr>
+                <td>Limes</td>
+                <td id="lime"></td>
+              </tr>
+
+              <tr>
+                <td>Cajun Spices</td>
+                <td id="cajunSpices"></td>
+              </tr>
+
+              <tr>
+                <td>Potatos</td>
+                <td id="potato"></td>
+              </tr>
+
+              <tr>
+                <td>Paprika Spice Mix</td>
+                <td id="paprikaMix"></td>
+              </tr>
+
+              <tr>
+                <td>Ginger</td>
+                <td id="ginger"></td>
+              </tr>
+
+              <tr>
+                <td>Bean Mix</td>
+                <td id="beanMix"></td>
+              </tr>
+
+              <tr>
+                <td>Pearl Couscous</td>
+                <td id="pearlCouscous"></td>
+              </tr>
+
+              <tr>
+                <td>Falafel Mix</td>
+                <td id="falafelMix"></td>
+              </tr>
+
+              <tr>
+                <td>Rolls</td>
+                <td id="rolls"></td>
+              </tr>
+
+              <tr>
+                <td>Red Onions</td>
+                <td id="redOnion"></td>
+              </tr>
+
+              <tr>
+                <td>Cherry Tomato's</td>
+                <td id="cherryTomatoes"></td>
+              </tr>
+
+
             </table>
           </div>
         </div>
@@ -86,40 +233,97 @@
 </html>
 
 <script>
-  //Variables for all ingredients
+  //Variables for all ingredients and required javascript to display their quantity in the table
   var garlic = 0;
   document.getElementById("garlic").innerHTML = garlic;
 
   var curryPaste = 0;
+
+
   var curryPowder = 0;
+
+
   var onion = 0;
+
+
   var sweetPotato = 0;
+
+
   var carrot = 0;
+
+
   var chickpeas = 0; //g
+
+
   var coconutMilk = 0; //cans
+
+
   var rice = 0; //g
+
+
   var chilli = 0;
+
+
   var noodleVests = 0;
+
+
   var pepper = 0;
+
+
   var courgette = 0;
+
+
   var soySauce = 0;
-  var choppedTomatoes = 0;
+
+
   var kidneyBeans = 0;
+
+
   var blackEyeBeans = 0;
+
+
   var spiceMix = 0;
+
+
   var tomato = 0;
+
+
   var avocado = 0;
+
+
   var lime = 0;
+
+
   var cajunSpices = 0;
+
+
   var potato = 0;
+
+
   var paprikaMix = 0;
+
+
   var ginger = 0;
+
+
   var beanMix = 0;
+
+
   var pearlCouscous = 0;
+
+
   var falafelMix = 0;
+
+
   var rolls = 0;
+
+
   var redOnion = 0;
+
+
   var cherryTomatoes = 0;
+
+
 
   // Javascript for the changing the contents of the card to the first recipe
   function recipe1() {
@@ -216,7 +420,7 @@ function recipe7() {
 function updateList() {
   var x = document.getElementById("default");
     if (x.innerHTML === firstRecipe){
-      garlic = garlic + 3;
+      garlic = garlic + 1;
       curryPaste = curryPaste + 1;
       curryPowder = curryPowder + 1;
       onion = onion + 1;
