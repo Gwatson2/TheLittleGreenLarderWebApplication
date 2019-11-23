@@ -64,8 +64,6 @@
             <p>When it comes to trying to live a sustainable life, some easy ways to do so are by shopping at a zero waste store (such as The Little Green Larder), buying loose fruit and veg and eating less meat. Here you will find some easy recipes
               that you can make from products you can purchase from The Little Green Larder which will help you to live a more sustainable life.</p>
           </div>
-
-          <button type="button" onclick="updateList()" class="btn btn-outline-success">Add Ingredients to Shopping List</button>
         </div>
 
         <div class="card-footer bg-transparent">
@@ -79,6 +77,8 @@
             <tr>
               <td>Garlic</td>
               <td id="garlic"></td>
+              <td><button type="button" onclick="addGarlic()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removeGarlic()" class="btn btn-outline-success">Remove</button></td>
             </tr>
 
             <tr>
@@ -197,7 +197,7 @@
             </tr>
 
             <tr>
-              <td>Bean Mix</td>
+              <td>Bean Mix, TVP Mince</td>
               <td id="beanMix"></td>
             </tr>
 
@@ -238,10 +238,24 @@
 </html>
 
 <script>
-  //Variables for all ingredients and required javascript to display their quantity in the table
+  //Variables and Functions for all ingredients and required javascript to display and manage their quantity in the shopping list
+
+  //Garlic
   var garlic = 0;
   document.getElementById("garlic").innerHTML = garlic;
 
+  function addGarlic(){
+    garlic = garlic + 1;
+    document.getElementById("garlic").innerHTML = garlic;
+  }
+
+  function removeGarlic(){
+    garlic = garlic - 1;
+    document.getElementById("garlic").innerHTML = garlic;
+  }
+
+
+  //Curry Paste
   var curryPaste = 0;
   document.getElementById("curryPaste").innerHTML = curryPaste;
 
@@ -328,22 +342,6 @@
 
   var cherryTomatoes = 0;
   document.getElementById("cherryTomatoes").innerHTML = cherryTomatoes;
-
-  // Javascript for the button which will update the shopping list with new ingredients
-  function updateList() {
-    var x = document.getElementById("default");
-    if (x.innerHTML === firstRecipe) {
-      garlic = garlic + 1;
-      curryPaste = curryPaste + 1;
-      curryPowder = curryPowder + 1;
-      onion = onion + 1;
-      sweetPotato = sweetPotato + 1;
-      carrot = carrot + 1;
-      chickpeas = chickpeas + 200; //g
-      coconutMilk = coconutMilk + 1; //cans
-      rice = rice + 150; //g
-    }
-  }
 
   // Javascript for the changing the contents of the card to the first recipe
   function recipe1() {
