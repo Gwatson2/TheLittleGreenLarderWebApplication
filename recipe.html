@@ -62,7 +62,7 @@
               <p>When it comes to trying to live a sustainable life, some easy ways to do so are by shopping at a zero waste store (such as The Little Green Larder), buying loose fruit and veg and eating less meat. Here you will find some easy recipes that you can make from products you can purchase from The Little Green Larder which will help you to live a more sustainable life.</p>
             </div>
 
-            <button type="button" class="btn btn-outline-success">View Shopping List</button>
+            <button type="button" onclick="shoppingList()" class="btn btn-outline-success">View Shopping List</button>
             <button type="button" class="btn btn-outline-success">Add Ingredients to Shopping List</button>
           </div>
         </div>
@@ -160,6 +160,21 @@ function recipe7() {
 
   if (x.innerHTML !== seventhRecipe){
     x.innerHTML = seventhRecipe;
+  } else {
+    x.innerHTML = "<p>When it comes to trying to live a sustainable life, some easy ways to do so are by shopping at a zero waste store (such as The Little Green Larder), buying loose fruit and veg and eating less meat. Here you will find some easy recipes that you can make from products you can purchase from The Little Green Larder which will help you to live a more sustainable life.</p>";
+  }
+}
+
+// Javascript for the changing the contents of the card to the shopping List
+function shoppingList() {
+  var x = document.getElementById("default");
+
+  var shoppingListHeader = "<h3>My Shopping List</h3>";
+
+  //
+
+  if (x.innerHTML !== shoppingListHeader){
+    x.innerHTML = shoppingListHeader;
   } else {
     x.innerHTML = "<p>When it comes to trying to live a sustainable life, some easy ways to do so are by shopping at a zero waste store (such as The Little Green Larder), buying loose fruit and veg and eating less meat. Here you will find some easy recipes that you can make from products you can purchase from The Little Green Larder which will help you to live a more sustainable life.</p>";
   }
