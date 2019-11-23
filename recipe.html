@@ -64,6 +64,20 @@
 
             <button type="button" onclick="updateList()" class="btn btn-outline-success">Add Ingredients to Shopping List</button>
           </div>
+          <div class ="card-footer bg-transparent">
+            <h3>Shopping List</h3>
+            <table>
+              <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+              </tr>
+
+              <tr>
+                <td>Garlic</td>
+                <td id="garlic"></td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
     </main>
@@ -74,6 +88,8 @@
 <script>
   //Variables for all ingredients
   var garlic = 0;
+  document.getElementById("garlic").innerHTML = garlic;
+
   var curryPaste = 0;
   var curryPowder = 0;
   var onion = 0;
