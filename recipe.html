@@ -1,30 +1,827 @@
 <html lang="en" dir="ltr">
-  <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Bungee+Inline&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="master.css">
-    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Little Green Larder</title>
-  </head>
-  <body>
+  <link rel="stylesheet" href="master.css">
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Inline&display=swap" rel="stylesheet">
 
-    <div class="sidenav">
-      <a href="index.html">Home</a>
-      <a href="map.html">Map</a>
-      <a href="recipe.html">Recipe</a>
-      <a href="advice.html">Advice</a>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Little Green Larder</title>
+</head>
+
+<body>
+
+  <div class="sidenav">
+    <a href="index.html">Home</a>
+    <a href="map.html">Map</a>
+    <a href="recipe.html">Recipe</a>
+    <a href="advice.html">Advice</a>
+  </div>
+  <div classs="container" id="header">
+    <div class="row">
+      <img
+        src="data:image/png;base64,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"
+        width="90" height="90" alt="The Little Green Larder Logo">
+
+      <h2>Recipe's</h2>
+
     </div>
-    <div classs="container" id="header">
-      <div class="row">
-        <img
-          src="data:image/png;base64,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"
-          width="90" height="90" alt="The Little Green Larder Logo">
+  </div>
 
-          <h2>Recipe</h2>
+  <main>
+    <div class="container" id="recipe">
+      <p>All recipe's were provided to us by the owner of The Little Green Larder.</p>
+
+      <ul class="list-group list-group-horizontal-lg">
+        <li class="list-inline border-0">
+          <button type="button" onclick="recipe1()" class="btn btn-outline-success">Sweet Potato & Chick Pea Curry</button>
+        </li>
+        <li class="list-inline border-0">
+          <button type="button" onclick="recipe2()" class="btn btn-outline-success">Garlic, Chilli & Veg Stir Fry</button>
+        </li>
+        <li class="list-inline border-0">
+          <button type="button" onclick="recipe3()" class="btn btn-outline-success">Vegan Chilli, Guacamole & Rice</button>
+        </li>
+        <li class="list-inline border-0">
+          <button type="button" onclick="recipe4()" class="btn btn-outline-success">Cajun Chickpea Burger & Wedges</button>
+        </li>
+        <li class="list-inline border-0">
+          <button type="button" onclick="recipe5()" class="btn btn-outline-success">Thai Veg Curry with Noodles</button>
+        </li>
+        <li class="list-inline border-0">
+          <button type="button" onclick="recipe6()" class="btn btn-outline-success">Vegan Chilli, Guacamole & Pearl Couscous</button>
+        </li>
+        <li class="list-inline border-0">
+          <button type="button" onclick="recipe7()" class="btn btn-outline-success">Falafel Burgers, Guacamole & Salad</button>
+        </li>
+      </ul>
+
+      <div class="card">
+
+        <div class="card-body">
+          <div id="default">
+            <p>When it comes to trying to live a sustainable life, some easy ways to do so are by shopping at a zero waste store (such as The Little Green Larder), buying loose fruit and veg and eating less meat. Here you will find some easy recipes
+              that you can make from products you can purchase from The Little Green Larder which will help you to live a more sustainable life.</p>
+          </div>
+        </div>
+
+        <div class="card-footer bg-transparent">
+          <h3>Shopping List</h3>
+          <table>
+            <tr>
+              <th>Product</th>
+              <th>Quantity</th>
+            </tr>
+
+            <tr>
+              <td>Garlic</td>
+              <td id="garlic"></td>
+              <td><button type="button" onclick="addGarlic()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removeGarlic()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Curry Paste</td>
+              <td id="curryPaste"></td>
+              <td><button type="button" onclick="addCurryPaste()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removeCurryPaste()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Curry Powder</td>
+              <td id="curryPowder"></td>
+              <td><button type="button" onclick="addCurryPowder()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removeCurryPowder()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Onions</td>
+              <td id="onion"></td>
+              <td><button type="button" onclick="addOnion()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removeOnion()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Sweet Potatos</td>
+              <td id="sweetPotato"></td>
+              <td><button type="button" onclick="addSweetPotato()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removeSweetPotato()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Carrots</td>
+              <td id="carrot"></td>
+              <td><button type="button" onclick="addCarrot()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removeCarrot()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Chickpeas (g)</td>
+              <td id="chickpeas"></td>
+              <td><button type="button" onclick="addChickpeas()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removeChickpeas()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Cans of Coconut Milk</td>
+              <td id="coconutMilk"></td>
+              <td><button type="button" onclick="addCoconutMilk()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removeCoconutMilk()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Rice (g)</td>
+              <td id="rice"></td>
+              <td><button type="button" onclick="addRice()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removeRice()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Chilli's</td>
+              <td id="chilli"></td>
+              <td><button type="button" onclick="addChilli()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removeChilli()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Noodle Vests</td>
+              <td id="noodleVests"></td>
+              <td><button type="button" onclick="addNoodleVests()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removeNoodleVests()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Peppers</td>
+              <td id="pepper"></td>
+              <td><button type="button" onclick="addPepper()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removePepper()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Courgettes</td>
+              <td id="courgette"></td>
+              <td><button type="button" onclick="addCourgette()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removeCourgette()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Soy Sauce</td>
+              <td id="soySauce"></td>
+              <td><button type="button" onclick="addSoySauce()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removeSoySauce()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Tomatos</td>
+              <td id="tomato"></td>
+              <td><button type="button" onclick="addTomato()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removeTomato()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Kidney Beans</td>
+              <td id="kidneyBeans"></td>
+              <td><button type="button" onclick="addKidneyBeans()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removeKidneyBeans()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Black Eye Beans</td>
+              <td id="blackEyeBeans"></td>
+              <td><button type="button" onclick="addBlackEyeBeans()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removeBlackEyeBeans()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Spice Mix</td>
+              <td id="spiceMix"></td>
+              <td><button type="button" onclick="addSpiceMix()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removeSpiceMix()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Avocados</td>
+              <td id="avocado"></td>
+              <td><button type="button" onclick="addAvocado()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removeAvocado()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Limes</td>
+              <td id="lime"></td>
+              <td><button type="button" onclick="addLime()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removeLime()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Cajun Spices</td>
+              <td id="cajunSpices"></td>
+              <td><button type="button" onclick="addCajunSpices()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removeCajunSpices()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Potatos</td>
+              <td id="potato"></td>
+              <td><button type="button" onclick="addPotato()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removePotato()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Paprika Spice Mix</td>
+              <td id="paprikaMix"></td>
+              <td><button type="button" onclick="addPaprikaMix()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removePaprikaMix()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Ginger</td>
+              <td id="ginger"></td>
+              <td><button type="button" onclick="addGinger()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removeGinger()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Bean Mix, TVP Mince</td>
+              <td id="beanMix"></td>
+              <td><button type="button" onclick="addBeanMix()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removeBeanMix()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Pearl Couscous</td>
+              <td id="pearlCouscous"></td>
+              <td><button type="button" onclick="addPearlCouscous()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removePearlCouscous()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Falafel Mix</td>
+              <td id="falafelMix"></td>
+              <td><button type="button" onclick="addFalafelMix()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removeFalafelMix()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Rolls</td>
+              <td id="rolls"></td>
+              <td><button type="button" onclick="addRolls()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removeRolls()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Red Onions</td>
+              <td id="redOnion"></td>
+              <td><button type="button" onclick="addRedOnion()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removeRedOnion()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+            <tr>
+              <td>Cherry Tomato's</td>
+              <td id="cherryTomatoes"></td>
+              <td><button type="button" onclick="addCherryTomatoes()" class="btn btn-outline-success">Add</button>
+              <button type="button" onclick="removeCherryTomatoes()" class="btn btn-outline-success">Remove</button></td>
+            </tr>
+
+          </table>
+
+        </div>
       </div>
     </div>
+  </main>
 
-  </body>
+</body>
+
 </html>
+
+<script>
+  //Variables and Functions for all ingredients and required javascript to display and manage their quantity in the shopping list
+
+  //Garlic
+  var garlic = 0;
+  document.getElementById("garlic").innerHTML = garlic;
+
+  function addGarlic(){
+    garlic = garlic + 1;
+    document.getElementById("garlic").innerHTML = garlic;
+  }
+
+  function removeGarlic(){
+    garlic = garlic - 1;
+    document.getElementById("garlic").innerHTML = garlic;
+  }
+
+  //Curry Paste
+  var curryPaste = 0;
+  document.getElementById("curryPaste").innerHTML = curryPaste;
+
+  function addCurryPaste(){
+    curryPaste = curryPaste + 1;
+    document.getElementById("curryPaste").innerHTML = curryPaste;
+    }
+
+  function removeCurryPaste(){
+    curryPaste = curryPaste - 1;
+    document.getElementById("curryPaste").innerHTML = curryPaste;
+    }
+
+  //Curry Powder
+  var curryPowder = 0;
+  document.getElementById("curryPowder").innerHTML = curryPowder;
+
+  function addCurryPowder(){
+    curryPowder = curryPowder + 1;
+    document.getElementById("curryPowder").innerHTML = curryPowder;
+  }
+
+  function removeCurryPowder(){
+    curryPowder = curryPowder - 1;
+    document.getElementById("curryPowder").innerHTML = curryPowder;
+  }
+
+  //Onion
+  var onion = 0;
+  document.getElementById("onion").innerHTML = onion;
+
+  function addOnion(){
+    onion = onion + 1;
+    document.getElementById("onion").innerHTML = onion;
+  }
+
+  function removeOnion(){
+    onion = onion - 1;
+    document.getElementById("onion").innerHTML = onion;
+  }
+
+  //Sweet Potato
+  var sweetPotato = 0;
+  document.getElementById("sweetPotato").innerHTML = sweetPotato;
+
+  function addSweetPotato(){
+    sweetPotato = sweetPotato + 1;
+    document.getElementById("sweetPotato").innerHTML = sweetPotato;
+  }
+
+  function removeSweetPotato(){
+    sweetPotato = sweetPotato - 1;
+    document.getElementById("sweetPotato").innerHTML = sweetPotato;
+  }
+
+  //Carrot
+  var carrot = 0;
+  document.getElementById("carrot").innerHTML = carrot;
+
+  function addCarrot(){
+    carrot = carrot + 1;
+    document.getElementById("carrot").innerHTML = carrot;
+  }
+
+  function removeCarrot(){
+    carrot = carrot - 1;
+    document.getElementById("carrot").innerHTML = carrot;
+  }
+
+  //Chickpeas
+  var chickpeas = 0; //g
+  document.getElementById("chickpeas").innerHTML = chickpeas;
+
+  function addChickpeas(){
+    chickpeas = chickpeas + 100;
+    document.getElementById("chickpeas").innerHTML = chickpeas;
+  }
+
+  function removeChickpeas(){
+    chickpeas = chickpeas - 100;
+    document.getElementById("chickpeas").innerHTML = chickpeas;
+  }
+
+  //Coconut Milk
+  var coconutMilk = 0; //cans
+  document.getElementById("coconutMilk").innerHTML = coconutMilk;
+
+  function addCoconutMilk(){
+    coconutMilk = coconutMilk + 1;
+    document.getElementById("coconutMilk").innerHTML = coconutMilk;
+  }
+
+  function removeCoconutMilk(){
+    coconutMilk = coconutMilk - 1;
+    document.getElementById("coconutMilk").innerHTML = coconutMilk;
+  }
+
+  //Rice
+  var rice = 0; //g
+  document.getElementById("rice").innerHTML = rice;
+
+  function addRice(){
+    rice = rice + 100;
+    document.getElementById("rice").innerHTML = rice;
+  }
+
+  function removeRice(){
+    rice = rice - 100;
+    document.getElementById("rice").innerHTML = rice;
+  }
+
+  //Chilli
+  var chilli = 0;
+  document.getElementById("chilli").innerHTML = chilli;
+
+  function addChilli(){
+    chilli = chilli + 1;
+    document.getElementById("chilli").innerHTML = chilli;
+  }
+
+  function removeChilli(){
+    chilli = chilli - 1;
+    document.getElementById("chilli").innerHTML = chilli;
+  }
+
+  //Noodle Vests
+  var noodleVests = 0;
+  document.getElementById("noodleVests").innerHTML = noodleVests;
+
+  function addNoodleVests(){
+    noodleVests = noodleVests + 1;
+    document.getElementById("noodleVests").innerHTML = noodleVests;
+  }
+
+  function removeNoodleVests(){
+    noodleVests = noodleVests - 1;
+    document.getElementById("noodleVests").innerHTML = noodleVests;
+  }
+
+  //Pepper
+  var pepper = 0;
+  document.getElementById("pepper").innerHTML = pepper;
+
+  function addPepper(){
+    pepper = pepper + 1;
+    document.getElementById("pepper").innerHTML = pepper;
+  }
+
+  function removePepper(){
+    pepper = pepper - 1;
+    document.getElementById("pepper").innerHTML = pepper;
+  }
+
+  //Courgette
+  var courgette = 0;
+  document.getElementById("courgette").innerHTML = courgette;
+
+  function addCourgette(){
+    courgette = courgette + 1;
+    document.getElementById("courgette").innerHTML = courgette;
+  }
+
+  function removeCourgette(){
+    courgette = courgette - 1;
+    document.getElementById("courgette").innerHTML = courgette;
+  }
+
+  //Soy Sauce
+  var soySauce = 0;
+  document.getElementById("soySauce").innerHTML = soySauce;
+
+  function addSoySauce(){
+    soySauce = soySauce + 1;
+    document.getElementById("soySauce").innerHTML = soySauce;
+  }
+
+  function removeSoySauce(){
+    soySauce = soySauce - 1;
+    document.getElementById("soySauce").innerHTML = soySauce;
+  }
+
+  //Kidney Beans
+  var kidneyBeans = 0;
+  document.getElementById("kidneyBeans").innerHTML = kidneyBeans;
+
+  function addKidneyBeans(){
+    kidneyBeans = kidneyBeans + 1;
+    document.getElementById("kidneyBeans").innerHTML = kidneyBeans;
+  }
+
+  function removeKidneyBeans(){
+    kidneyBeans = kidneyBeans - 1;
+    document.getElementById("kidneyBeans").innerHTML = kidneyBeans;
+  }
+
+  //Black Eye Beans
+  var blackEyeBeans = 0;
+  document.getElementById("blackEyeBeans").innerHTML = blackEyeBeans;
+
+  function addBlackEyeBeans(){
+    blackEyeBeans = blackEyeBeans + 1;
+    document.getElementById("blackEyeBeans").innerHTML = blackEyeBeans;
+  }
+
+  function removeBlackEyeBeans(){
+    blackEyeBeans = blackEyeBeans - 1;
+    document.getElementById("blackEyeBeans").innerHTML = blackEyeBeans;
+  }
+
+  //Spice Mix
+  var spiceMix = 0;
+  document.getElementById("spiceMix").innerHTML = spiceMix;
+
+  function addSpiceMix(){
+    spiceMix = spiceMix + 1;
+    document.getElementById("spiceMix").innerHTML = spiceMix;
+  }
+
+  function removeSpiceMix(){
+    spiceMix = spiceMix - 1;
+    document.getElementById("spiceMix").innerHTML = spiceMix;
+  }
+
+  //Tomato
+  var tomato = 0;
+  document.getElementById("tomato").innerHTML = tomato;
+
+  function addTomato(){
+    tomato = tomato + 1;
+    document.getElementById("tomato").innerHTML = tomato;
+  }
+
+  function removeTomato(){
+    tomato = tomato - 1;
+    document.getElementById("tomato").innerHTML = tomato;
+  }
+
+  //Avocado
+  var avocado = 0;
+  document.getElementById("avocado").innerHTML = avocado;
+
+  function addAvocado(){
+    avocado = avocado + 1;
+    document.getElementById("avocado").innerHTML = avocado;
+  }
+
+  function removeAvocado(){
+    avocado = avocado - 1;
+    document.getElementById("avocado").innerHTML = avocado;
+  }
+
+  //Lime
+  var lime = 0;
+  document.getElementById("lime").innerHTML = lime;
+
+  function addLime(){
+    lime = lime + 1;
+    document.getElementById("lime").innerHTML = lime;
+  }
+
+  function removeLime(){
+    lime = lime - 1;
+    document.getElementById("lime").innerHTML = lime;
+  }
+
+  //Cajun Spices
+  var cajunSpices = 0;
+  document.getElementById("cajunSpices").innerHTML = cajunSpices;
+
+  function addCajunSpices(){
+    cajunSpices = cajunSpices + 1;
+    document.getElementById("cajunSpices").innerHTML = cajunSpices;
+  }
+
+  function removeCajunSpices(){
+    cajunSpices = cajunSpices - 1;
+    document.getElementById("cajunSpices").innerHTML = cajunSpices;
+  }
+
+  //Potato
+  var potato = 0;
+  document.getElementById("potato").innerHTML = potato;
+
+  function addPotato(){
+    potato = potato + 1;
+    document.getElementById("potato").innerHTML = potato;
+  }
+
+  function removePotato(){
+    potato = potato - 1;
+    document.getElementById("potato").innerHTML = potato;
+  }
+
+  //Paprika Mix
+  var paprikaMix = 0;
+  document.getElementById("paprikaMix").innerHTML = paprikaMix;
+
+  function addPaprikaMix(){
+    paprikaMix = paprikaMix + 1;
+    document.getElementById("paprikaMix").innerHTML = paprikaMix;
+  }
+
+  function removePaprikaMix(){
+    paprikaMix = paprikaMix - 1;
+    document.getElementById("paprikaMix").innerHTML = paprikaMix;
+  }
+
+  //Ginger
+  var ginger = 0;
+  document.getElementById("ginger").innerHTML = ginger;
+
+  function addGinger(){
+    ginger = ginger + 1;
+    document.getElementById("ginger").innerHTML = ginger;
+  }
+
+  function removeGinger(){
+    ginger = ginger - 1;
+    document.getElementById("ginger").innerHTML = ginger;
+  }
+
+  //Bean Mix
+  var beanMix = 0;
+  document.getElementById("beanMix").innerHTML = beanMix;
+
+  function addBeanMix(){
+    beanMix = beanMix + 1;
+    document.getElementById("beanMix").innerHTML = beanMix;
+  }
+
+  function removeBeanMix(){
+    beanMix = beanMix - 1;
+    document.getElementById("beanMix").innerHTML = beanMix;
+  }
+
+  //Pearl Couscous
+  var pearlCouscous = 0;
+  document.getElementById("pearlCouscous").innerHTML = pearlCouscous;
+
+  function addPearlCouscous(){
+    pearlCouscous = pearlCouscous + 1;
+    document.getElementById("pearlCouscous").innerHTML = pearlCouscous;
+  }
+
+  function removePearlCouscous(){
+    pearlCouscous = pearlCouscous - 1;
+    document.getElementById("pearlCouscous").innerHTML = pearlCouscous;
+  }
+
+  //Falafel Mix
+  var falafelMix = 0;
+  document.getElementById("falafelMix").innerHTML = falafelMix;
+
+  function addFalafelMix(){
+    falafelMix = falafelMix + 1;
+    document.getElementById("falafelMix").innerHTML = falafelMix;
+  }
+
+  function removeFalafelMix(){
+    falafelMix = falafelMix - 1;
+    document.getElementById("falafelMix").innerHTML = falafelMix;
+  }
+
+  //Rolls
+  var rolls = 0;
+  document.getElementById("rolls").innerHTML = rolls;
+
+  function addRolls(){
+    rolls = rolls + 1;
+    document.getElementById("rolls").innerHTML = rolls;
+  }
+
+  function removeRolls(){
+    rolls = rolls - 1;
+    document.getElementById("rolls").innerHTML = rolls;
+  }
+
+  //Red Onion
+  var redOnion = 0;
+  document.getElementById("redOnion").innerHTML = redOnion;
+
+  function addRedOnion(){
+    redOnion = redOnion + 1;
+    document.getElementById("redOnion").innerHTML = redOnion;
+  }
+
+  function removeRedOnion(){
+    redOnion = redOnion - 1;
+    document.getElementById("redOnion").innerHTML = redOnion;
+  }
+
+  //Cherry Tomatoes
+  var cherryTomatoes = 0;
+  document.getElementById("cherryTomatoes").innerHTML = cherryTomatoes;
+
+  function addCherryTomatoes(){
+    cherryTomatoes = cherryTomatoes + 1;
+    document.getElementById("cherryTomatoes").innerHTML = cherryTomatoes;
+  }
+
+  function removeCherryTomatoes(){
+    cherryTomatoes = cherryTomatoes - 1;
+    document.getElementById("cherryTomatoes").innerHTML = cherryTomatoes;
+  }
+
+
+  // Javascript for the changing the contents of the card to the first recipe
+  function recipe1() {
+    var x = document.getElementById("default");
+
+    var firstRecipe =
+      "<h3>Sweet Potato and Chick Pea Curry Bag (Serves 2)</h3> <strong>Ingredients</strong> <br> 2-3 cloves of garlic <br> 2 tbsp curry paste <br> 1 tsp curry powder <br> 1 onion <br> 1 sweet potato <br> 1 carrot <br> 200g chick peas <br> 1 can of coconut milk <br> 150g rice <br> <br> <ol> <li>Soak the chickpeas for 4 to 8 hours (you may wish to just leave them overnight), rinse them and then place them in a pot of water. Bring the water to boil and them simmer them for 1 hour. Drain them and set them aside.</li> <li>Peel and chop your cloves garlic and you vegetables.</li> <li>Fry your onions and garlic in oil for 1 minute and then add the curry paste and fry for a further 2 minutes.</li> <li>Add the can of coconut milk, stir and then add your sweet potato and the chick peas, then cook for 10 minutes.</li> <li>Add the carrots and cook for a further 10-15 minutes</li> <li>Serve with rice and enjoy!</li> </ol> <br>";
+
+    if (x.innerHTML !== firstRecipe) {
+      x.innerHTML = firstRecipe;
+    } else {
+      x.innerHTML =
+        "<p>When it comes to trying to live a sustainable life, some easy ways to do so are by shopping at a zero waste store (such as The Little Green Larder), buying loose fruit and veg and eating less meat. Here you will find some easy recipes that you can make from products you can purchase from The Little Green Larder which will help you to live a more sustainable life.</p>";
+    }
+  }
+
+  //Javascript for the changing of the contents of the card to the second recipe
+  function recipe2() {
+    var x = document.getElementById("default");
+
+    var secondRecipe =
+      "<h3>Garlic, Chilli and Vegetable Stir Fry (Serves 2)</h3> <strong>Ingredients</strong> <br> 2-4 cloves of garlic <br> 1 chilli <br> 2 noodle vests <br> 1 onion <br> 1 carrot <br> 1 pepper <br> 1 courgette <br> Soy sauce <br> <br> <ol> <li>Chop the garlic and the chilli (you can include the seeds if you wish, for extra spice) and slice the pepper and onion. Use a vegetable peeler to ribbon the whole carrot and courgette, though if you don't have a peeler you can just chop them.</li> <li>Boil the noodles in water, drain them and set them aside.</li> <li>In a wok, fry the garlic and the chilli in oil for 1 minute, add in the onions and fry for 1 minute.</li> <li>Add the rest of the vegetables and fry for 5 minutes</li> <li>Add the noodles and the soy sauce and then stir fry until the noodles are hot</li> <li>Serve and enjoy!</li> </ol> <br>";
+
+    if (x.innerHTML !== secondRecipe) {
+      x.innerHTML = secondRecipe;
+    } else {
+      x.innerHTML =
+        "<p>When it comes to trying to live a sustainable life, some easy ways to do so are by shopping at a zero waste store (such as The Little Green Larder), buying loose fruit and veg and eating less meat. Here you will find some easy recipes that you can make from products you can purchase from The Little Green Larder which will help you to live a more sustainable life.</p>";
+    }
+  }
+
+  //Javascript for the changing of the contents of the card to the third recipe
+  function recipe3() {
+    var x = document.getElementById("default");
+
+    var thirdRecipe =
+      "<h3>Vegan Chilli, Guacamole and Rice (Serves 2)</h3> <strong>Chilli Ingredients</strong> <br> Chopped tomatoes <br> 3/4 onion <br> Carrot <br> Kidney and black eye beans <br> Chickpeas <br> 1/2 chilli <br> Spice mix <br> 2-4 cloves of garlic <br> Rice <br> <strong>Guacamole Ingredients</strong> <br> Tomato <br> Avocado <br> 1-2 cloves of garlic <br> Lime <br> 1/2 chilli <br> 1/4 onion <br> <br> <ol> <li>Soak the chickpeas and the beans for 4-8 hours (you may wish to just leave them overnight), rinse then place them in a pot of water. Bring the water to boil and them simmer for 1 hour. Drain them and set them aside.</li> <li>Chop your onion, 4-6 cloves of garlic, chilli and carrot. Fry 2-4 of the cloves of garlic, 3/4 onion and spices in oil for 2-4 minutes (you may want to add 1/2 chilli for some extra spice). Add carrots and then fry for a further 5 minutes.</li> <li>Add chickpeas, beans and the can of chopped tomatoes and cook for 20-30 minutes. Use salt and pepper to taste and then serve with rice.</li> <li>For the guacamole, mash the avocado and mix with 1-2 cloves of garlic, the other 1/4 of the onion, chopped fresh tomatoes, the other 1/2 of the chilli and squeeze 1/2 of the juice from the lime into it. Use salt and pepper to taste.</li> <li>Serve and enjoy!</li> </ol> <br>";
+
+    if (x.innerHTML !== thirdRecipe) {
+      x.innerHTML = thirdRecipe;
+    } else {
+      x.innerHTML =
+        "<p>When it comes to trying to live a sustainable life, some easy ways to do so are by shopping at a zero waste store (such as The Little Green Larder), buying loose fruit and veg and eating less meat. Here you will find some easy recipes that you can make from products you can purchase from The Little Green Larder which will help you to live a more sustainable life.</p>";
+    }
+  }
+
+  // Javascript for the changing the contents of the card to the fourth recipe
+  function recipe4() {
+    var x = document.getElementById("default");
+
+    var fourthRecipe =
+      "<h3>Cajun Chickpea Burger with Wedges (Serves 2)</h3> <strong>Ingredients</strong> <br> Garlic <br> Onion <br> Carrot <br> Courgette <br> Chickpeas <br> Cajun spices <br> Potato <br> Paprika spice mix <br> <br> <ol> <li>Soak the chickpeas for 4-8 hours (you may wish to just leave them overnight), rinse then place them into a pot of water. Bring the water to boil and then simmer for 1 hour. Drain them and set them aside.</li> <li>Cut the potato(es) into wedges and place on a baking tray. Lightly drizzle over some oil and sprinkle on the wedge spice mix. Cook at 200/gas mark 6 for 15-20 minutes.</li> <li>Grate the carrots and courgette and squeeze any excess water out with a towel or a napkin.</li> <li>Blend or mash the chickpeas until they are coarsely mashed, but not to a paste.</li> <li>Chop the onion and 2-4 cloves of garlic and fry them with the Cajun spice mix for 2-4 minutes.</li> <li>Combine all of the ingredients in a bowl, add some salt and pepper to taste then form them into burgers and fry them in oil for 5 minutes on each side.</li> <li>Serve and enjoy!</li> </ol> <br>";
+
+    if (x.innerHTML !== fourthRecipe) {
+      x.innerHTML = fourthRecipe;
+    } else {
+      x.innerHTML =
+        "<p>When it comes to trying to live a sustainable life, some easy ways to do so are by shopping at a zero waste store (such as The Little Green Larder), buying loose fruit and veg and eating less meat. Here you will find some easy recipes that you can make from products you can purchase from The Little Green Larder which will help you to live a more sustainable life.</p>";
+    }
+  }
+
+  // Javascript for the changing the contents of the card to the fifth recipe
+  function recipe5() {
+    var x = document.getElementById("default");
+
+    var fifthRecipe =
+      "<h3>Thai Vegetable Curry with Noodles (Serves 2)</h3> <strong>Ingredients</strong> <br> 2-4 cloves of garlic <br> 2tbsp curry paste <br> 1 tsp ground ginger <br> 1 onion <br> 1 carrot <br> 1 pepper <br> 1 courgette <br> 1 lime <br> 1 chilli <br> Can of coconut milk <br> Noodles <br> <br> <ol> <li>Peel and chop your garlic, chilli and vegetables.</li> <li>Fry the onions, chilli, ground ginger and garlic in oil for 2 minutes.</li> <li>Add in the other vegetables and cook for 5 minutes until they are almost tender.</li> <li>Add the curry paste and cook for another 2 minutes, stirring often.</li> <li>Add the can of coconut milk and cook for up to 10 minutes.</li> <li>Remove from heat and add a squeeze of lime to taste.</li> <li>Boil the noodles in water, drain them and then serve and enjoy!</li> </ol> <br>";
+
+    if (x.innerHTML !== fifthRecipe) {
+      x.innerHTML = fifthRecipe;
+    } else {
+      x.innerHTML =
+        "<p>When it comes to trying to live a sustainable life, some easy ways to do so are by shopping at a zero waste store (such as The Little Green Larder), buying loose fruit and veg and eating less meat. Here you will find some easy recipes that you can make from products you can purchase from The Little Green Larder which will help you to live a more sustainable life.</p>";
+    }
+  }
+
+  // Javascript for the changing the contents of the card to the sixth recipe
+  function recipe6() {
+    var x = document.getElementById("default");
+
+    var sixthRecipe =
+      "<h3>Vegan Chilli, Guacamole and Pearl Couscous (Serves 2)</h3> <strong>Chilli Ingredients</strong> <br> Chopped tomatoes <br> 3/4 onion <br> Pepper <br> Bean mix, TVP mince <br> Chickpeas <br> 1/2 chilli <br> Spice mix <br> 2-4 cloves of garlic <br> Pearl couscous <br> <strong>Guacamole Ingredients</strong> <br> Tomato <br> Avocado <br> 1-2 cloves of garlic <br> Lime <br> 1/2 chilli <br> 1/4 onion <br> <br> <ol> <li>Soak the bean mix for 4-8 hours (you may wish to just leave them overnight), rinse then place in a pot of water. Bring to boil and them simmer for 1 hour. Drain and then set aside. Soak the TVP mince for 10 minutes, drain and then set aside.</li> <li>Chop the onion, 4-6 cloves of garlic, chilli and pepper. Fry 2-4 cloves of garlic, 3/4 onion and spices in oil for 2-4 minutes (you may wish to add 1/2 chilli for some extra spice). Add pepper and fry for a further 5 minutes.</li> <li>Add the TVP mince and bean mix, as well as the can of chopped tomatoes and cook for 20-30 minutes, use salt and pepper to taste and serve with couscous.</li> <li>For the guacamole, mash avocado and mix with 1-2 cloves of garlic, 1/4 of the onion, fresh tomatoes, the other 1/2 of the chilli and squeeze 1/2 of the lime juice in. Use salt and peper to taste.</li> <li>Serve and enjoy!</li> </ol> <br>";
+
+    if (x.innerHTML !== sixthRecipe) {
+      x.innerHTML = sixthRecipe;
+    } else {
+      x.innerHTML =
+        "<p>When it comes to trying to live a sustainable life, some easy ways to do so are by shopping at a zero waste store (such as The Little Green Larder), buying loose fruit and veg and eating less meat. Here you will find some easy recipes that you can make from products you can purchase from The Little Green Larder which will help you to live a more sustainable life.</p>";
+    }
+  }
+
+  // Javascript for the changing the contents of the card to the seventh recipe
+  function recipe7() {
+    var x = document.getElementById("default");
+
+    var seventhRecipe =
+      "<h3>Falafel Burgers, Guacamole and Salad (Serves 2)</h3> <strong>Ingredients</strong> <br> Falafel mix <br> 2 rolls <br> Avocado <br> Garlic <br> Lime <br> Chilli <br> Courgette <br> Red onion <br> Cherry tomatoes <br> Carrot <br> <br> <ol> <li>Add water 1tbsp at a time to the falafel mix until it holds together then set it aside for 10 minutes before shaping them into 2 patties.</li> <li>Use a vegetable peeler to ribbon the carrot and courgette, chop the onion and half of the cherry tomatoes. Mix in a bowl (add 1/2 chilli if you want to add a little bit of spice) and squeezde 1/2 of a lime over, then use salt and pepper to taste.</li> <li>For guacamole, mash the avocado, mix with 1-2 cloves of garlic, 1/4 of the onion, chopped fresh tomatoes, 1/2 of the chilli and squeeze 1/2 of the lime juice in. Use salt and pepper to taste.</li> <li>Fry the falafel burgers in oil for a few minutes on each size and then serve on rolls and enjoy!</li> </ol> <br>";
+
+    if (x.innerHTML !== seventhRecipe) {
+      x.innerHTML = seventhRecipe;
+    } else {
+      x.innerHTML =
+        "<p>When it comes to trying to live a sustainable life, some easy ways to do so are by shopping at a zero waste store (such as The Little Green Larder), buying loose fruit and veg and eating less meat. Here you will find some easy recipes that you can make from products you can purchase from The Little Green Larder which will help you to live a more sustainable life.</p>";
+    }
+  }
+</script>
