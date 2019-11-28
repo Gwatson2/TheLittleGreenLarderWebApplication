@@ -55,6 +55,8 @@
              "data" : {
                "type" : "FeatureCollection",
                "features" : [{
+
+                 // Features for The Little Green Larder point
                  "type" : "Feature",
                  "geometry": {
                    "type" : "Point",
@@ -62,23 +64,134 @@
                  },
                  "properties": {
                    "title": "The Little Green Larder",
+                   "description": "<p>A <em>zero-waste, eco-friendly</em> shop which sells mostly package free items. They have everything from <strong>dry foods to fresh fruit and veg to vegan pick'n'mix and eco-friendly cleaning products.</strong>They also have recycling stations for our toothbrushes, crisp packets and clothes! Nothing goes to waste either - with any unsellable but still perfectly edible food being donated to the <em>West End Community Fridge<em>.</p>",
                    "icon": "shop"
                  }
-               }]
-             }
-           },
+            }, {
+              // Features for Birchwood Emporium
+                "type" : "Feature",
+                "geometry": {
+                  "type" : "Point",
+                  "coordinates": [-2.967323, 56.461275]
+              },
+              "properties": {
+                "title": "Birchwood Emporium",
+                "description": "<p><em>Birchwood Food Emporium and Cafe</em> is an addition to Dundee's City Centre, rebranded and expanded from the former WholeFoods Dundee. The family-run business offers a wide selection of <strong>organic wholefoods produced and sourced locally</strong>. Their cosy cafe offers a delicious menu catering to <em>all dietary restrictions</em> with a vast selection of <strong>vegan and gluten-free choices.</strong></p> <p>Students get a 10% Discount!</p>",
+                "icon": "shop"
+              }
+            }, {
+              // Features for Marwick's Vegan Kitchen
+                "type" : "Feature",
+                "geometry": {
+                  "type" : "Point",
+                  "coordinates": [-2.973097, 56.4586315]
+              },
+              "properties": {
+                "title": "Marwick's Vegan Kitchen",
+                "description": "<p>Marwick's Vegan Kitchen wasn't <em>always</em> 100% vegan. However, after thriving in <strong>'Veganuary'</strong>, they knew there was no going back.They now only stock loose leaf tea and soft drinks in cans or glasses in order to curb their plastic usage. They have also added an <em>in-house zero-waste shop</em> with everything from <strong>reusable coffee cups to bamboo toothbrushes and shampoo bars</strong>.</p> <p>Student offer available!</p>",
+                "icon": "restaurant"
+              }
+            }, {
+              // Features for Tayside ReUsers
+                "type" : "Feature",
+                "geometry": {
+                  "type" : "Point",
+                  "coordinates": [-2.985459, 56.462627]
+              },
+              "properties": {
+                "title": "Tayside ReUsers",
+                "description": "<p>Trading for 20 years, Tayside ReUsers have helped raise awareness of environmental concerns with emphasis on the importance of recycling, all to support the local community. The next time you need a <strong>new toaster or desk chair</strong>, check this incredible warehouse out. Everything is fully tested and refurbished - just in need of a new home. </p>",
+                "icon": "furniture"
+              }
+            }, {
+              // Features for Le Freak Records
+                "type" : "Feature",
+                "geometry": {
+                  "type" : "Point",
+                  "coordinates": [-2.992732, 56.456234]
+              },
+              "properties": {
+                "title": "Le Freak Records",
+                "description": "<p>Le Freak Records sell <strong>new and second hand records</strong> alongside intimate store gigs and DJ sets. They are huge believers in <em>'recycling/up-cycling to give old prudcts that would [have] been thrown away a new life in really interesting ways'</em>They give lots of old vinyl a new home a by shopping with them, so can <strong>you</strong>.</p>",
+                "icon": "music"
+              }
+            }, {
+              // Features for Groucho's Record Store
+                "type" : "Feature",
+                "geometry": {
+                  "type" : "Point",
+                  "coordinates": [-2.974043, 56.458204]
+              },
+              "properties": {
+                "title": "Groucho's Record Store",
+                "description": "<p>Groucho's is <em>'one of the longest running and well renowned CD, DVD and record shops in Dundee'.</em> It's also won <em>Dundee's Independent Retailer of the Year</em> <strong>four times</strong>. Why not support a local and sustainable business that has been on our fixture of our high street for over 40 years?</p>",
+                "icon": "music"
+              }
+            }, {
+              // Features for Spex Pistols
+                "type" : "Feature",
+                "geometry": {
+                  "type" : "Point",
+                  "coordinates": [-2.978909, 56.459724]
+              },
+              "properties": {
+                "title": "Spex Pistols",
+                "description": "<p>Located just off the University campus, Spex Pistols is a unique creative gem. Not only is it <strong>'fully stocked with a wide variety of designer, vintage and classy frames'</strong>, they also cater for every pocket, personality and profile. They offer a <em>frame repair service</em> described as 'gold-dust'. Save yourself time, money and heartache and give this little shop a visit. </p>",
+                "icon": "furniture"
+              }
+            }, {
+              // Features for Gate Church International
+                "type" : "Feature",
+                "geometry": {
+                  "type" : "Point",
+                  "coordinates": [-2.984433, 56.456326]
+              },
+              "properties": {
+                "title": "Gate Church International",
+                "description": "<p>Gate Church International want to become the <em>Greenest Church in Scotland</em> and it's not holding back. Since they are funded by the Scottish Government's Climate Challenge Fund, they are doing everything they can to help the local community <em>transition to a more sunstainable way of life</em></p>. <p>By reusing and recycling through their <strong>'Give Boxes'</strong> network, you can be a part of that change. Donate your reusable clothes, household goods, toys and electrical items.</p> <p>Do what you can, educate yourself about what you can and help each other - help the <strong>world!</strong> Do your part to bring Dundee into the international people community of people who want to make the world (sustainably) <em>stronger</em>. </p>",
+                "icon": "religious-christian"
+              }
+           }]
+      }
+     },
             "layout": {
               "icon-image": "{icon}-15",
+
               "text-field": "{title}",
               "text-font": ["Roboto Regular"],
               "text-offset": [0.6, 0.1],
             "text-anchor": "left",
            }
          });
+         map.on('click', 'points', function (e) {
+           var coordinates = e.features[0].geometry.coordinates.slice();
+           var description = e.features[0].properties.description;
+
+           while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+             coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+           }
+
+           new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
       });
+
+      // Change the cursor to a pointer when the mouse is over the places layer.
+      map.on('mouseenter', 'points', function () {
+        map.getCanvas().style.cursor = 'pointer';
+      });
+
+      // Change it back to a pointer when it leaves.
+      map.on('mouseleave', 'points', function () {
+        map.getCanvas().style.cursor = '';
+      });
+});
 
       map.addControl(new mapboxgl.NavigationControl());
     </script>
+
+  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
 
   </body>
 </html>

@@ -82,9 +82,13 @@ table {
 }
 
 #map{
-  height:300px;
-  width:400px;
+  height:600px;
+  width:1175px;
 
+  margin-left:180px;
+  margin-top:20px;
+
+  position: absolute;
 }
 
 .container{
