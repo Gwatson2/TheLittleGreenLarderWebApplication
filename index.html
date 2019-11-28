@@ -11,6 +11,25 @@
   <script src="https://kit.fontawesome.com/efa804cdca.js" crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="C:\Users\gemma\Downloads\Finalicon.ico"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="manifest.json">
+
+  <script>
+    //Script to refer to the service worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('serviceWorker.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ',registration.scope);
+        }, function(err) {
+          //Registration failed
+          console.log('ServiceWorker registration failed: ', err);
+          });
+        });
+      });
+    }
+  </script>
+  
   <!-- Set the title of the webpage -->
   <title>The Little Green Larder</title>
 </head>
