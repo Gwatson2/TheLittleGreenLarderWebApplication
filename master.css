@@ -1,4 +1,5 @@
 body {
+  /* Set the font for all of the body tags within the pages as 'Lato' */
   font-family: "Lato", sans-serif;
   font-size: 15px;
   padding-bottom: 20px;
@@ -11,11 +12,13 @@ footer {
 
 p{
  font-size:15px;
+ /* Set the font for all of the p tags within the pages as 'Roboto' */
  font-family: 'Roboto', sans-serif;
 }
 
 
 h2{
+  /* Set the font for all of the h2 tags within the pages as 'Bungee Inline' */
   font-family: 'Bungee Inline', cursive;
   padding: 5px;
   font-family: 'Bungee Inline', cursive;
@@ -23,12 +26,14 @@ h2{
 
 h3{
   padding: 5px;
+  /* Set the font for all of the h3 tags within the pages as 'Bungee Inline' */
   font-family: 'Bungee Inline', cursive;
   font-size: 20px;
 }
 
 h4{
   padding: 5px;
+  /* Set the font for all of the h4 tags within the pages as 'Bungee Inline' */
   font-family: 'Bungee Inline', cursive;
   font-size: 16px;
 }
@@ -42,34 +47,43 @@ table {
   border-spacing: 20px 0;
 }
 
+/* CSS for only the heading part in Home page */
 .aboutus{
   font-size:20px;
 }
+
+/* CSS to centre the corresponding text */
 .centretext{
   text-align: center;
 }
 
+/* CSS for the body of the quiz */
 .quizbody{
   background-color:#81CEA2;
 }
 
+/* CSS for the side nav */
 .sidenav {
   height: 100%;
   width: 160px;
   position: fixed;
+  /* Set the z-index as 1. This specifes the stack order of the sidenav meaning the sidenav will be placed in front of the page, like a layer. The z-index is dependent on the position, which is fixed in the sidenav. */
   z-index: 1;
   top: 0;
   left: 0;
   background-color: #111;
+  /* Set the overflow-x as hidden, meaning there won't be a scroll bar on the nav bar */
   overflow-x: hidden;
   padding-top: 20px;
 }
 
+/* CSS to use for breaks inbetween sections */
 .break{
   background-color: #818181;
   height: 4px;
 }
 
+/* CSS for the links active in the nav bar */
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
@@ -77,10 +91,12 @@ table {
   display: block;
 }
 
+/* CSS for when the user hovers over the active links in the nav bar */
 .sidenav a:hover {
   color: #f1f1f1;
 }
 
+/* CSS for the Mapbox feature */
 #map{
   height:600px;
   width:1175px;
@@ -91,86 +107,107 @@ table {
   position: absolute;
 }
 
+/* CSS for the classes containing 'container' */
 .container{
   padding-left:160px;
 }
 
+/* CSS for the About Us section, mainly the description */
 .about{
   font-size:20px;
 }
 
+/* CSS to specify what words are important in the Advice page*/
 .important{
 color: #329E62;
 font-size: 17px;
+/* Set the font for the .important class as 'Bungee Inline' */
 font-family: 'Bungee Inline', cursive;
 padding:0;
 }
 
+/* CSS for the links available to click in the Advice page */
 .links{
   color: #81CEA2;
 }
 
+/* CSS for the opening times sections*/
 #openingtimes {
   font-size: 12px;
 }
 
+/* CSS for each nav item within the nav bar */
 #navitem{
   font-size: 25px;
 }
+
+/* CSS for an image within the Advice page*/
 #adviceimg
 {
   padding-right: 10px;
 }
 
+/* CSS for the social media links (i.e. Facebook and Instagram) */
 #socials{
   float: left;
 }
 
+/* CSS for the Continue Article button in the Home page*/
 #advicebtn{
   float:right;
 }
 
+/* CSS for an image within the Advice page*/
 #adviceimg2
 {
   padding-left: 15px;
 }
 
+/* CSS for the Home page header */
 #aboutus{
   background-color: #329E62;
   font-size: 18px;
 }
 
+/* CSS for the Quiz button, allowing the user to take the zero-waste quiz */
 #quizbtn{
   padding: 10px;
 }
 
+/* CSS for the list seen in the Advice page*/
 #advicelist{
   padding:2px;
 
 }
 
+/* CSS for the events section */
 #events{
   background-color:#81CEA2;
 }
 
+/* CSS for the two rows of images in the Home page */
 #images {
     padding-left: 160px;
 }
 
+/* CSS for a section of advice in the Advice page */
 #txt2advice{
 background-color: #818181;
   padding-left: 10;
 }
 
+/* CSS for a section of advice in the Advice page */
 #txt3advice{
     padding-left: 10;
 }
 
+/* CSS for a section of advice in the Advice page */
 #txt4advice{
     padding-left: 10;
     background-color: #329E62;
 }
 
+/* CSS for the bottom of the advice page */
 #endadvice{
 background-color: #818181;
  bottom: 0;
@@ -182,71 +219,85 @@ padding-left:160px;
 }
 
 }
+
+/* CSS for the subheadings that appear when on a specific page (e.g when on the Home page, About Us will appear) */
 #nesnavs{
   font-size:10px;
   padding-top: 2px;
 }
 
+/* CSS for the specific images within the two rows of images  */
 #collection{
   padding:5px;
 }
 
+/* CSS for a section of advice in the Advice page */
 #txt1advice{
     background-color:#81CEA2;
     padding-left: 10;
 }
 
+/* CSS for a picture of cards within the Events section */
 #cardpic{
   width:275px;
   height:275px;
 }
 
-
+/* CSS for the corresponding image of the article in the Home page */
 #articleimage{
   width: 465px;
   height:270px;
 }
 
+/* CSS for the text below the article's image */
 #alerttext{
   font-size: 12px;
 }
 
-
+/* CSS for the Date and Time above the 'Continue Article' button in the Home page */
 .right{
   font-size:16px;
   text-align:right;
   color:#B4B8C5;
 }
 
+/* CSS for all of the headers */
 #header{
   background-color: #329E62;
   height:100px;
   padding-left: 190px;
 }
 
+/* CSS for the repurpose ID */
 #repurpose{
   padding-left: 40px;
 }
+
+/* CSS for the advice text in the Advice page */
 #advice{
   padding-bottom: 20px;
 }
 
+/* CSS for Facebook Icon */
 #fbicon{
   color:#1877F2;
   padding: 5px;
   height:20px;
 }
 
+/* CSS for Instagram Icon */
 #ig{
   padding:5px;
   color:#D52F87;
   height: 20px;
 }
 
+/* CSS for the Contact details provided in the Home page  */
 #contact{
   padding-right: 40px;
 }
 
+/* CSS for the heading of the Quiz */
 #quizhead{
 text-align: center;
 font-family: 'Bungee Inline', cursive;
@@ -277,6 +328,7 @@ padding-left: 170px;
   background-color: white;
 }
 
+/*  */
 #resultcon{
   font-family: 'Bungee Inline', cursive;
   background-color: #329E62;
@@ -284,33 +336,41 @@ padding-left: 170px;
   width:700px;
 }
 
+/*  */
 #quiz{
   padding-left: 200px;
   padding-right: 200px;
   padding-bottom: 0;
 }
 
+/*  */
 .quiz{
   text-align: center;
 }
 
+/*  */
 .second{
   font-size: 16;
 }
 
+/*  */
 .card{
   padding:5px;
 }
+
+/*  */
 .card-text{
   font-size:14px;
 }
 
+/*  */
 .main {
   padding-left: 160px; /* Same as the width of the sidenav */
   font-size: 28px; /* Increased text to enable scrolling */
   padding: 0px 10px;
 }
 
+/*  */
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
