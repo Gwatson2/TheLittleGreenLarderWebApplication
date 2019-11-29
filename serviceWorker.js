@@ -1,53 +1,52 @@
-var CACHE_NAME = 'green-larder-localStorage';
-var urlsToCache = [
-  './',
-  './index.html',
-  './advice.html',
-  './map.html',
-  './quiz.html',
-  './recipe.html'
-  './index.png',
-  './littlegreenlarderlogo.png',
-  './master.css',
-  './manifest.json',
-  './README.md'
-];
-
-self.addEventListener('install', function(event) {
-  //Perform install steps
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(function(cache)) {
-        console.log('Opened cache');
-        return cache.addAll (urlsToCache);
-      })
-  );
+//The code for this service worker was taken from https://blog.heroku.com/how-to-make-progressive-web-app
+self.addEventListener("install", function(event) {
+  event.waitUntil(preLoad());
 });
 
-self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.match(event.request)
-      .then(function(response) {
-        // Cache hit - return response
-        if (response) {
-          return response;
-        }
+var preLoad = function(){
+  console.log("Installing the web app.");
+  return caches.open("offline").then(function(cache) {
+    console.log("caching index and important routes");
+    return cache.addAll(["/", "/index", "/advice", "/map", "/quiz", "/recipe", "/master", "/manifest"]);
+  });
+};
 
-        return fetch(event.request).then(
-          function(response) {
-            // Check if we received a valid response
-            if(!response || response.status !== 200 || response.type !== 'basic') {
-              return response;
-            }
-            var responseToCache = response.clone();
-
-            caches.open(CACHE_NAME)
-              .then(function(cache) {
-                cache.put(event.request, responseToCache);
-              });
-            return response;
-          }
-        );
-      })
-  );
+self.addEventListener("fetch", function(event) {
+  event.respondWith(checkResponse(event.request).catch(function() {
+    return returnFromCache(event.request);
+  }));
+  event.waitUntil(addToCache(event.request));
 });
+
+var checkResponse = function(request){
+  return new Promise(function(fulfill, reject) {
+    fetch(request).then(function(response){
+      if(response.status !== 404){
+        fulfill(response);
+      } else {
+        reject();
+      }
+    }, reject);
+  });
+};
+
+var addToCache = function(request){
+  return caches.open("offline").then(function (cache) {
+    return fetch(request).then(function (response) {
+      console.log(response.url + " was cached");
+      return cache.put(request, response);
+    });
+  });
+};
+
+var returnFromCache = function(request){
+  return caches.open("offline").then(function (cache) {
+    return cache.match(request).then(function (matching) {
+      if(!matching || matching.status == 404) {
+        return cache.match("offline.html");
+      } else {
+        return matching;
+      }
+    })
+  })
+}
