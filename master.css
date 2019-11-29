@@ -57,6 +57,7 @@ ul{
   background-color: #111;
   overflow-x: hidden;
   padding-top: 20px;
+  transition: 0.5s;
 }
 
 .break{
@@ -69,10 +70,28 @@ ul{
   text-decoration: none;
   color: #818181;
   display: block;
+   transition: 0.3s;
 }
 
 .sidenav a:hover {
   color: #f1f1f1;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
 
 .container{
@@ -215,6 +234,19 @@ padding-left:160px;
   padding-bottom: 20px;
 }
 
+
+#col1{
+  index:1
+}
+
+#col2{
+  index:2
+}
+
+#col3{
+  index:3
+}
+
 #fbicon{
   color:#1877F2;
   padding: 5px;
@@ -298,3 +330,11 @@ padding-left: 170px;
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+  @media (max-width: 575.98px) {
+    #adviceimg2
+    {
+      display:none;
+     }
+   }
