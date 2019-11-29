@@ -182,6 +182,15 @@
   </main>
 </body>
 
+<script>
+  //This is the script to load the service ServiceWorker
+  if (!navigator.serviceWorker.controller) {
+    navigator.serviceWorker.register("/serviceWorker.js"),then(function(reg) {
+      console.log("Service worker has been registered for scope: " + reg.scope);
+    });
+  }
+</script>
+
 <!-- Footer of the page -->
 <footer>
   <div class="container fixed-bottom" id="footer">
