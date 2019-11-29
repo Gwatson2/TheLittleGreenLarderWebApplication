@@ -1,17 +1,23 @@
 <html lang="en" dir="ltr">
   <head>
+
+    <!-- Link to necessary frameworks, APIs and CSS files -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Bungee+Inline&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="master.css">
     <link href="https://fonts.googleapis.com/css?family=Bungee+Inline&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Set the title of the webpage -->
     <title>The Little Green Larder</title>
   </head>
   <header>
   </header>
   <body>
 
+    <!-- Code for the side navigation bar, link each nav item to their corresponding page -->
     <div class="sidenav">
       <a href="index.html">Home</a>
       <a href="map.html">Map</a>
@@ -19,16 +25,191 @@
       <a href="advice.html">Advice</a>
     </div>
 
-
+  <!-- Code for the header of the page -->
   <div classs="container" id="header">
       <div class="row">
+        <!-- Link to The Little Green Larder image -->
         <img
           src="data:image/png;base64,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"
           width="90" height="90" alt="The Little Green Larder Logo">
 
           <h2>Map</h2>
+
+
       </div>
     </div>
+
+    <!-- Introduction text to map so the user knows what the map is actually for -->
+    <h3 style="padding-left:200px; padding-top:10px;">Here are a few locations within Dundee who participate in being zero-waste:</h3>
+
+
+  <div id='map'></div>
+  <!-- Use Javascript and the Mapbox API to display an interactive map that highlights the various zero-waste shops and services around Dundee, giving a brief description of each -->
+    <script>
+    // Link to unique access token to get full access to the Mapbox API
+      mapboxgl.accessToken = 'pk.eyJ1IjoiY21jYXUiLCJhIjoiY2szOHpwaWEwMGF0azNjdDlzZDNwdDRxdCJ9.3P_T2Vzxfvn6Wrsmz4fmfg';
+      var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        // Set the centre of the map to specific coordinates. (Dundee City Centre)
+        center: [-2.978,56.459],
+        zoom: 14
+      });
+
+      // When the map loads,
+       map.on('load', function() {
+
+         // Add a layer displaying all of the zero-waste shops and services with icons and text
+         map.addLayer({
+           // Set the name (or ID) of the layer as 'points'
+           "id" : "points",
+           "type" : "symbol",
+           "source" : {
+             "type" : "geojson",
+             "data" : {
+               "type" : "FeatureCollection",
+               "features" : [{
+
+                 // Features for The Little Green Larder point
+                 "type" : "Feature",
+                 "geometry": {
+                   "type" : "Point",
+                   "coordinates": [-2.992331, 56.455920]
+                 },
+                 "properties": {
+                   "title": "The Little Green Larder",
+                   "description": "<p>A <em>zero-waste, eco-friendly</em> shop which sells mostly package free items. They have everything from <strong>dry foods to fresh fruit and veg to vegan pick'n'mix and eco-friendly cleaning products.</strong>They also have recycling stations for our toothbrushes, crisp packets and clothes! Nothing goes to waste either - with any unsellable but still perfectly edible food being donated to the <em>West End Community Fridge<em>.</p>",
+                   "icon": "shop"
+                 }
+            }, {
+              // Features for Birchwood Emporium point
+                "type" : "Feature",
+                "geometry": {
+                  "type" : "Point",
+                  "coordinates": [-2.967323, 56.461275]
+              },
+              "properties": {
+                "title": "Birchwood Emporium",
+                "description": "<p><em>Birchwood Food Emporium and Cafe</em> is an addition to Dundee's City Centre, rebranded and expanded from the former WholeFoods Dundee. The family-run business offers a wide selection of <strong>organic wholefoods produced and sourced locally</strong>. Their cosy cafe offers a delicious menu catering to <em>all dietary restrictions</em> with a vast selection of <strong>vegan and gluten-free choices.</strong></p> <p>Students get a 10% Discount!</p>",
+                "icon": "shop"
+              }
+            }, {
+              // Features for Marwick's Vegan Kitchen point
+                "type" : "Feature",
+                "geometry": {
+                  "type" : "Point",
+                  "coordinates": [-2.973097, 56.4586315]
+              },
+              "properties": {
+                "title": "Marwick's Vegan Kitchen",
+                "description": "<p>Marwick's Vegan Kitchen wasn't <em>always</em> 100% vegan. However, after thriving in <strong>'Veganuary'</strong>, they knew there was no going back.They now only stock loose leaf tea and soft drinks in cans or glasses in order to curb their plastic usage. They have also added an <em>in-house zero-waste shop</em> with everything from <strong>reusable coffee cups to bamboo toothbrushes and shampoo bars</strong>.</p> <p>Student offer available!</p>",
+                "icon": "restaurant"
+              }
+            }, {
+              // Features for Tayside ReUsers point
+                "type" : "Feature",
+                "geometry": {
+                  "type" : "Point",
+                  "coordinates": [-2.985459, 56.462627]
+              },
+              "properties": {
+                "title": "Tayside ReUsers",
+                "description": "<p>Trading for 20 years, Tayside ReUsers have helped raise awareness of environmental concerns with emphasis on the importance of recycling, all to support the local community. The next time you need a <strong>new toaster or desk chair</strong>, check this incredible warehouse out. Everything is fully tested and refurbished - just in need of a new home. </p>",
+                "icon": "furniture"
+              }
+            }, {
+              // Features for Le Freak Records point
+                "type" : "Feature",
+                "geometry": {
+                  "type" : "Point",
+                  "coordinates": [-2.992732, 56.456234]
+              },
+              "properties": {
+                "title": "Le Freak Records",
+                "description": "<p>Le Freak Records sell <strong>new and second hand records</strong> alongside intimate store gigs and DJ sets. They are huge believers in <em>'recycling/up-cycling to give old prudcts that would [have] been thrown away a new life in really interesting ways'</em>They give lots of old vinyl a new home a by shopping with them, so can <strong>you</strong>.</p>",
+                "icon": "music"
+              }
+            }, {
+              // Features for Groucho's Record Store point
+                "type" : "Feature",
+                "geometry": {
+                  "type" : "Point",
+                  "coordinates": [-2.974043, 56.458204]
+              },
+              "properties": {
+                "title": "Groucho's Record Store",
+                "description": "<p>Groucho's is <em>'one of the longest running and well renowned CD, DVD and record shops in Dundee'.</em> It's also won <em>Dundee's Independent Retailer of the Year</em> <strong>four times</strong>. Why not support a local and sustainable business that has been on our fixture of our high street for over 40 years?</p>",
+                "icon": "music"
+              }
+            }, {
+              // Features for Spex Pistols point
+                "type" : "Feature",
+                "geometry": {
+                  "type" : "Point",
+                  "coordinates": [-2.978909, 56.459724]
+              },
+              "properties": {
+                "title": "Spex Pistols",
+                "description": "<p>Located just off the University campus, Spex Pistols is a unique creative gem. Not only is it <strong>'fully stocked with a wide variety of designer, vintage and classy frames'</strong>, they also cater for every pocket, personality and profile. They offer a <em>frame repair service</em> described as 'gold-dust'. Save yourself time, money and heartache and give this little shop a visit. </p>",
+                "icon": "furniture"
+              }
+            }, {
+              // Features for Gate Church International point
+                "type" : "Feature",
+                "geometry": {
+                  "type" : "Point",
+                  "coordinates": [-2.984433, 56.456326]
+              },
+              "properties": {
+                "title": "Gate Church International",
+                "description": "<p>Gate Church International want to become the <em>Greenest Church in Scotland</em> and it's not holding back. Since they are funded by the Scottish Government's Climate Challenge Fund, they are doing everything they can to help the local community <em>transition to a more sunstainable way of life</em></p>. <p>By reusing and recycling through their <strong>'Give Boxes'</strong> network, you can be a part of that change. Donate your reusable clothes, household goods, toys and electrical items.</p> <p>Do what you can, educate yourself about what you can and help each other - help the <strong>world!</strong> Do your part to bring Dundee into the international people community of people who want to make the world (sustainably) <em>stronger</em>. </p>",
+                "icon": "religious-christian"
+              }
+           }]
+      }
+     },
+            // Set the layout of each point
+            "layout": {
+              "icon-image": "{icon}-15",
+
+              "text-field": "{title}",
+              "text-font": ["Roboto Regular"],
+              "text-offset": [0.6, 0.1],
+            "text-anchor": "left",
+           }
+         });
+
+         map.on('click', 'points', function (e) {
+           // Create a variable for coordinates and description
+           var coordinates = e.features[0].geometry.coordinates.slice();
+           var description = e.features[0].properties.description;
+
+           // Calculate the coordinates of the cursor
+           while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+             coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+           }
+
+           // Display the popup for each of the points which includes the description of that specific point
+           new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+      });
+
+      // Change the cursor to a pointer when the mouse is over the points layer.
+      map.on('mouseenter', 'points', function () {
+        map.getCanvas().style.cursor = 'pointer';
+      });
+
+      // Change it back to the previous cursor when it leaves.
+      map.on('mouseleave', 'points', function () {
+        map.getCanvas().style.cursor = '';
+      });
+});
+
+      // Add navigation control to the map, allowing the user to zoom in / out and set the map back to north facing
+      map.addControl(new mapboxgl.NavigationControl());
+    </script>
 
   </body>
 </html>
