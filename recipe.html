@@ -15,6 +15,10 @@
 
 <body>
 
+  <script>
+  document.body.classList.add('fade');
+</script>
+
   <!-- Code for the side navigation bar, link each nav item to their corresponding page -->
   <div class="sidenav">
     <a href="index.html" id="navitem">Home</a>
@@ -302,6 +306,12 @@
       </div>
     </div>
   </main>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function(e) {
+    document.body.classList.remove('fade');
+  });
+  </script>
 
 </body>
 
