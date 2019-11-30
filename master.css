@@ -3,10 +3,13 @@ body {
   font-family: "Lato", sans-serif;
   font-size: 15px;
   padding-bottom: 20px;
+  /* Set the opacity as normal and the transition to 7 seconds - meaning it will take 7 seconds of fading to get to normal opacity */
   opacity: 1;
   transition: 0.7s opacity;
 }
 
+/* Using the fade class created, set the opacity to 0 when the user first loads the page and use transition to create a smooth transition - set to 'none' as there is no need for any delays or any other properties that the transition property contains */
+/* Reference - https://alligator.io/js/simple-page-fade-in/ */
 body.fade {
     opacity: 0;
     transition: none;
