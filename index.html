@@ -67,11 +67,27 @@
       <a class="nav-link ml-3 my-1" id="nesnavs" href="#article">Article</a>
       <a class="nav-link ml-3 my-1" id="nesnavs" href="#openingtimes">Opening times</a>
     </nav>
-     <a class="nav-link" id="navitem" href="map.html">Map</a>
+    <!--When the Map nav is clicked, activate the openGoogleMaps() function -->
+     <a class="nav-link" id="navitem" href="map.html" style="cursor: pointer;" onclick="openGoogleMaps()">Map</a>
       <a class="nav-link" id="navitem" href="recipe.html">Recipe</a>
       <a class="nav-link" id="navitem"  href="advice.html">Advice</a>
     </nav>
     </div>
+
+    <script>
+    function openGoogleMaps(){
+        // If the user's current device is an iPhone / iPod / iPad then open the Google Maps app and display The Little Green Larder. This should work with Android devices despite not being specified.
+        // The decision to open an alternative app when the 'Map' nav is clicked was because on mobile, the original map didn't look great on the page.
+        if( (navigator.platform.indexOf("iPhone") != -1)
+            || (navigator.platform.indexOf("iPod") != -1)
+            || (navigator.platform.indexOf("iPad") != -1))
+             window.open("maps://maps.google.com/maps?daddr=Little+Green+Larder,+Perth+Road,+Dundee&amp;ll=");
+    }
+    </script>
+
+
+<!-- else
+    window.open("http://maps.google.com/maps?daddr=Little+Green+Larder,+Perth+Road,+Dundee&amp;ll="); -->
 
     <!-- The main section of the page -->
     <!-- The image and heading of the page couldn't be in the header for this specific page as there was more room needed for text -->
