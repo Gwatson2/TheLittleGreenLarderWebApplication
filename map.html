@@ -10,19 +10,40 @@
     <link rel="stylesheet" href="master.css">
     <link href="https://fonts.googleapis.com/css?family=Bungee+Inline&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="./manifest.json">
+
     <!-- Set the title of the webpage -->
     <title>The Little Green Larder</title>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          // registration failed
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+  </script>
   </head>
   <header>
   </header>
   <body>
 
+<!-- Use classList.add to the class 'fade' to the body tag -->
+    <script>
+    document.body.classList.add('fade');
+  </script>
+
     <!-- Code for the side navigation bar, link each nav item to their corresponding page -->
     <div class="sidenav">
-      <a href="index.html">Home</a>
-      <a href="map.html">Map</a>
-      <a href="recipe.html">Recipe</a>
-      <a href="advice.html">Advice</a>
+      <a href="index.html" id="navitem">Home</a>
+      <a class="nav-link" id="navitem" href="map.html">Map</a>
+       <a class="nav-link" id="navitem" href="recipe.html">Recipe</a>
+       <a class="nav-link" id="navitem"  href="advice.html">Advice</a>
     </div>
 
   <!-- Code for the header of the page -->
@@ -211,5 +232,13 @@
       map.addControl(new mapboxgl.NavigationControl());
     </script>
 
+<!-- Use classList.remove() to stop the fade after the specified seconds -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function(e) {
+      document.body.classList.remove('fade');
+    });
+    </script>
+
   </body>
+
 </html>
