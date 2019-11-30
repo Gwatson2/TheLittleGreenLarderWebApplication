@@ -308,15 +308,6 @@
 
 </body>
 
-<script>
-  //This is the script to load the service ServiceWorker
-  if (!navigator.serviceWorker.controller) {
-    navigator.serviceWorker.register("/serviceWorker.js"),then(function(reg) {
-      console.log("Service worker has been registered for scope: " + reg.scope);
-    });
-  }
-</script>
-
 <footer>
   <div class="container fixed-bottom" id="footer">
     <p>All recipe's were provided to us by the owner of The Little Green Larder.</p>
