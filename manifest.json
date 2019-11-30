@@ -7,9 +7,13 @@
   "theme_color": "#111"
   "icons": [
     {
-      "src": "/littlegreenlarderlogo.png",
+      "src": "/littlegreenlardericon.png",
       "type": "image/png",
-      "sizes": "95 x 119",
+      "sizes": "192 x 192"
+    },{
+      "src": "/littlegreenlardericon2.png",
+      "type": "image/png",
+      "sizes": "512 x 512"
     }
   ],
 }
