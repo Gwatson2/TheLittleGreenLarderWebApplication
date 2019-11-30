@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="master.css">
     <link href="https://fonts.googleapis.com/css?family=Bungee+Inline&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="manifest.json">
+
     <!-- Set the title of the webpage -->
     <title>The Little Green Larder</title>
   </head>
@@ -224,4 +227,14 @@
     </script>
 
   </body>
+
+  <script>
+    //This is the script to load the service ServiceWorker
+    if (!navigator.serviceWorker.controller) {
+      navigator.serviceWorker.register("/serviceWorker.js"),then(function(reg) {
+        console.log("Service worker has been registered for scope: " + reg.scope);
+      });
+    }
+  </script>
+
 </html>

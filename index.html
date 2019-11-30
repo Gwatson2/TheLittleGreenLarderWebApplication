@@ -10,9 +10,10 @@
   <link href="https://fonts.googleapis.com/css?family=Bungee+Inline&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/efa804cdca.js" crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="C:\Users\gemma\Downloads\Finalicon.ico"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1"
 
   <link rel="manifest" href="manifest.json">
+
 
   <script>
     //Script to refer to the service worker
@@ -29,6 +30,7 @@
       });
     }
   </script>
+
 
   <!-- Set the title of the webpage -->
   <title>The Little Green Larder</title>
@@ -318,6 +320,16 @@
 </script>
 
 </body>
+
+<script>
+  //This is the script to load the service ServiceWorker
+  if (!navigator.serviceWorker.controller) {
+    navigator.serviceWorker.register("/serviceWorker.js"),then(function(reg) {
+      console.log("Service worker has been registered for scope: " + reg.scope);
+    });
+  }
+</script>
+
 <!-- Link to necessary Javascripts -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
 </script>

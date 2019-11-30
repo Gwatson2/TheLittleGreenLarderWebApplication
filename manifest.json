@@ -9,6 +9,7 @@
       "sizes": "95 x 119",
     }
   ],
+  "scope": "/",
   "background_color": "#329E62",
   "theme_color": "#111"
 }
