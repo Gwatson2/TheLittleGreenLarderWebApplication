@@ -13,6 +13,19 @@
       <link rel="shortcut icon" href="C:\Users\gemma\Downloads\Finalicon.ico"/>
     <link rel="manifest" href="./manifest.webmanifest">
     <title>Zero-Waste Quiz</title>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          // registration failed
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+  </script>
   </head>
   <body class="quizbody">
     <div class="sidenav">
