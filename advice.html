@@ -17,6 +17,11 @@
 
 <body>
 
+<!-- Use classList.add to the class 'fade' to the body tag -->
+  <script>
+  document.body.classList.add('fade');
+</script>
+
   <!-- Code for the side navigation bar, link each nav item to their corresponding page -->
   <div class="sidenav">
     <a href="index.html" id="navitem">Home</a>
@@ -57,7 +62,7 @@
       <div class="row">
         <!-- Display advice list -->
         <div class="col-sm-5 container" id=advicelist>
-          <p>Five simple rules you can follow to to achieve zero-waste living:</p>
+          <p>Ten simple rules you can follow to to achieve zero-waste living:</p>
           <ol>
             <li>Shop at a <span class="important">zero waste</span> store</li>
             <li>Carry <span class="important">reusable</span> straws and cutlery</li>
@@ -71,7 +76,7 @@
             <li>Stop buying drinks in plastic bottles</li>
           </ol>
           <br>
-          <p>Following are 10 tips you can use to live a zero-waste lifestyle:</p>
+          <p>Following those rules, here are 10 tips you can use to live a zero-waste lifestyle:</p>
         </div>
         <!-- Display text to give further zero-waste advice to user and images to keep them interested-->
         <div class="col-sm" id="adviceimg2">
@@ -183,6 +188,14 @@
       </div>
 
   </main>
+
+<!-- Use classList.remove() to stop the fade class after the specified seconds -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function(e) {
+    document.body.classList.remove('fade');
+  });
+</script>
+
 </body>
 
 <script>
@@ -196,7 +209,7 @@
 
 <!-- Footer of the page -->
 <footer>
-
+  <!-- Style coding to create a transparent box for text present in footer -->
   <style>
     div.adviceBox {
       margin-left:200px;

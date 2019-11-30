@@ -20,6 +20,11 @@
   </header>
   <body>
 
+<!-- Use classList.add to the class 'fade' to the body tag -->
+    <script>
+    document.body.classList.add('fade');
+  </script>
+
     <!-- Code for the side navigation bar, link each nav item to their corresponding page -->
     <div class="sidenav">
       <a href="index.html" id="navitem">Home</a>
@@ -212,6 +217,13 @@
 
       // Add navigation control to the map, allowing the user to zoom in / out and set the map back to north facing
       map.addControl(new mapboxgl.NavigationControl());
+    </script>
+
+<!-- Use classList.remove() to stop the fade after the specified seconds -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function(e) {
+      document.body.classList.remove('fade');
+    });
     </script>
 
   </body>
