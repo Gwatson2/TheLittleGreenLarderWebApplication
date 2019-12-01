@@ -248,6 +248,7 @@ transition: margin .25s ease-out;
   padding: 10px;
 }
 
+
 /* CSS for the list seen in the Advice page*/
 #advicelist{
   padding:2px;
@@ -395,6 +396,10 @@ text-align: center;
 padding-left: 40px;
 }
 
+.quizbg{
+  background-color:#81CEA2;
+}
+
 .question{    //css for the quiz questions
   font-size: 15px;
   font-weight: 800;
@@ -407,7 +412,7 @@ padding-left: 40px;
   margin-top: 40px;
   padding-left: 10px;
   padding-bottom: 200px;
-  margin-left: 340px;
+  margin-left: 60px;
   background-color: white;
 }
 
@@ -415,8 +420,13 @@ padding-left: 40px;
 #resultcon{
   font-family: 'Bungee Inline', cursive;
   background-color: #329E62;
-  margin-left:340px;
+  margin-left:60px;
   width:700px;
+}
+
+/*  */
+#submit{
+  margin-left: 210px;
 }
 
 /*  */
@@ -458,7 +468,41 @@ padding-left: 40px;
 #header{
   height:300;
 }
+#endadvice{
+  height:300;
+}
 
+
+
+#reuseimg{
+  align-items: left;
+padding:15;
+padding-right:90;
+
+
+}
+
+#plantpic{
+margin-left:50;
+}
+
+#txt1advice{
+padding-left: 30px;
+
+}
+
+#txt2advice{
+padding-left: 30px;
+padding-right: 30px;
+padding-right: 30px;
+
+}
+
+#txt3advice{
+padding-left: 30px;
+padding-right: 30px;
+
+}
 
 
 }
