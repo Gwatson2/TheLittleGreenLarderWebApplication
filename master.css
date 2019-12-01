@@ -102,9 +102,9 @@ table {
 /* CSS for the Mapbox feature */
 #map{
   height:600px;
-  width:1175px;
+  width:100%;
 
-  margin-left:20px;
+  
   margin-top:20px;
 
   display:inline-block;
