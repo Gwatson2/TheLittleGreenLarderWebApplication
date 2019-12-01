@@ -104,7 +104,7 @@ table {
   height:600px;
   width:100%;
 
-  
+
   margin-top:20px;
 
   display:inline-block;
@@ -385,7 +385,7 @@ padding-left: 40px;
   background-color: white;
 }
 
-/*  */
+/* The results are contained in this container */
 #resultcon{
   font-family: 'Bungee Inline', cursive;
   background-color: #329E62;
@@ -393,41 +393,41 @@ padding-left: 40px;
   width:700px;
 }
 
-/*  */
+/* CSS for the Quiz itself */
 #quiz{
   padding-left: 200px;
   padding-right: 200px;
   padding-bottom: 0;
 }
 
-/*  */
+/* CSS for the text within the Quiz */
 .quiz{
   text-align: center;
 }
 
-/*  */
+/* CSS for the text within the second recipe */
 .second{
   font-size: 16;
 }
 
-/*  */
+/* General CSS for the cards used */
 .card{
   padding:5px;
 }
 
-/*  */
+/* General CSS for the text withint he cards */
 .card-text{
   font-size:14px;
 }
 
-/*  */
+/* CSS for the main parts of some of the pages */
 .main {
   padding-left: 30px; /* Same as the width of the sidenav */
   font-size: 28px; /* Increased text to enable scrolling */
   padding: 0px 10px;
 }
 
-/*  */
+/* CSS to help the website apply better for mobile interfaces */
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
