@@ -12,7 +12,7 @@
   <link rel="shortcut icon" href="C:\Users\gemma\Downloads\Finalicon.ico"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"
 
-  <link rel="manifest" href="./manifest.json">
+  <link rel="manifest" href="/manifest.json">
 
   <!-- Set the title of the webpage -->
   <title>The Little Green Larder</title>
@@ -37,7 +37,9 @@
 
     <!-- Code for the side navigation bar, link each nav item to their corresponding page -->
     <div class="bg-light border-right" id="sidebar-wrapper">
-        <div class="sidebar-heading">MENU </div>
+        <div class="sidebar-heading">menu
+      <img src="https://user-images.githubusercontent.com/55393692/68961692-d8c81180-07ca-11ea-8d81-fcbc7497e7cf.png" alt="" height=30 id="navicon">
+      </div>
         <div class="list-group list-group-flush">
           <a href="index.html" id="navitem" class="list-group-item list-group-item-action bg-light">Home</a>
           <!-- While on the Home (index) page, show links to About us, Upcoming Events, Article and Opening Times. The user can click these to jump to these sections within the page -->
@@ -50,9 +52,14 @@
           <a href="map.html" id="navitem" class="list-group-item list-group-item-action bg-light" style="cursor: pointer;" onclick="openGoogleMaps()">Map</a>
           <a href="recipe.html" id="navitem" class="list-group-item list-group-item-action bg-light">Recipe</a>
           <a href="advice.html" id="navitem" class="list-group-item list-group-item-action bg-light">Advice</a>
-
+        </div>
+<div class="nav-link ml-3 my-1" id="nesnav">
+            <h3>Follow Us:</h3>
+            <a href="https://www.facebook.com/thelittlegreenlarder/" class="fab fa-facebook float-left fa-2x" id="fbicon"></a>
+            <a href="https://www.instagram.com/thegreenlarder/?hl=en" class="fab fa-instagram float-left fa-2x" id="ig"></a>
         </div>
       </div>
+
 
       <!-- Page Content -->
         <div id="page-content-wrapper">
@@ -109,25 +116,25 @@
     <!-- Display a couple of rows of images to show variety of selection within the shop -->
     <div class="container" id="images">
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm d-none d-lg-block">
           <img
             src="https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-0/p200x200/73013804_459419194782156_1093617115874721792_n.jpg?_nc_cat=105&_nc_oc=AQmNic0PvDolQHA4kEQIlzeJ3yj8tuG55kdfeGakIMhAHjw0ekhYlSkXDH8XnSHvdd4wDYDS-kfZNCT0lZsQovFE&_nc_ht=scontent-lht6-1.xx&oh=c2fa2b785406d3c5604bd9fea96c5349&oe=5E622880"
-            class="rounded" alt="bag" id="collection">
+            class="rounded " alt="bag" id="collection">
         </div>
-        <div class="col-sm">
+        <div class="col-sm d-none d-lg-block">
           <img
             src="https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-0/c0.1.200.200a/p200x200/72784961_468909307166478_5805238738288115712_n.jpg?_nc_cat=106&_nc_oc=AQkw9_wCeDcWkLlQNNjJmBsVhva-JACzXq06gcvmeg2es62vlqZVTEFE_H66k7eeKZXi2FxHzKH12QNKEgLkA3Rh&_nc_ht=scontent-lht6-1.xx&oh=dddef652d5fe2034d7138ab2ecb9e069&oe=5E57F09E"
-            class="rounded" alt="stall display" id="collection">
+            class="rounded " alt="stall display" id="collection">
         </div>
-        <div class="col-sm">
+        <div class="col-smd-none d-lg-block">
           <img
             src="https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-0/p200x200/70727460_449710709086338_9020192029027598336_n.jpg?_nc_cat=103&_nc_oc=AQkSuqcXbimo8V29cz8jgybXMW3Apz6YRAW62aN7QiC75UHmWN43oT60rwLRd8J0_-ahQDVp3KhK3Z0bsCwVpgxg&_nc_ht=scontent-lht6-1.xx&oh=f078c81ef06712a1aab7111378d53279&oe=5E4CED33"
-            class="rounded" alt="cakes" id="collection">
+            class="rounded " alt="cakes" id="collection">
         </div>
-        <div class="col-sm">
+        <div class="col-sm d-none d-lg-block">
           <img
             src="https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-0/p200x200/72681435_467366857320723_2519279171310452736_n.jpg?_nc_cat=105&_nc_oc=AQl6lzubdwxmUyKeJVs52sABOFLgKpNQgaDNBztqefdiNJf_ecZnsrd6DQLVSwFgbaluvsL4rdehFmoC7hU65KkC&_nc_ht=scontent-lht6-1.xx&oh=0fa4d446a14ea501f9e3dcc6aaccf430&oe=5E51571B"
-            class="rounded" alt="cakes" id="collection">
+            class="rounded " alt="cakes" id="collection">
         </div>
       </div>
       <div class="row">
@@ -251,7 +258,7 @@
     <div class="container" id="contact">
       <div class="row">
 
-              <div class="col-sm-3">
+              <div class="col-sm-3 d-none d-lg-block">
                 <img src="https://scontent-lhr3-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s750x750/72777585_149017373033194_2618236184000729449_n.jpg?_nc_ht=scontent-lhr3-1.cdninstagram.com&_nc_cat=110&oh=b847fd13b9daa557c6f005301a23c945&oe=5E6B41E7" alt="" height=200>
               </div>
               <div class="col-sm-2">
@@ -260,7 +267,7 @@
                   <p>Dundee</p>
                    <p>DD2 1AE</p>
               </div>
-              <div class="col-sm-3">
+              <div class="col-sm-3 d-none d-lg-block ">
 <img src="https://scontent-lhr3-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s750x750/75207262_153350252704393_3850679526285476255_n.jpg?_nc_ht=scontent-lhr3-1.cdninstagram.com&_nc_cat=101&oh=51dc01d21acc0ba2da308b04710d7c27&oe=5E696AF1" alt="" height=200 >
               </div>
               <div class="col-sm-2">
@@ -269,7 +276,7 @@
                   <a href="https://www.facebook.com/thelittlegreenlarder/" class="fab fa-facebook float-left fa-2x" id="fbicon"></a>
                   <a href="https://www.instagram.com/thegreenlarder/?hl=en" class="fab fa-instagram float-left fa-2x" id="ig"></a>
               </div>
-              <div class="col-sm-2">
+              <div class="col-sm-2 d-none d-lg-block">
               <img src="https://scontent-lhr3-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/p750x750/74950909_1184674768394447_3076742868296888692_n.jpg?_nc_ht=scontent-lhr3-1.cdninstagram.com&_nc_cat=111&oh=8ee95ffd61a7fc5ae782a780184a3ffe&oe=5E528656" alt="" height=200>
             </div>
 
