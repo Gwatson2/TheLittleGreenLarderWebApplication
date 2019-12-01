@@ -15,18 +15,18 @@
   <!-- Set the title of the webpage -->
   <title>The Little Green Larder</title>
   <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/sw.js').then(function(registration) {
-          // Registration was successful
-          console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        }, function(err) {
-          // registration failed
-          console.log('ServiceWorker registration failed: ', err);
-        });
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js').then(function(registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }, function(err) {
+        // registration failed
+        console.log('ServiceWorker registration failed: ', err);
       });
-    }
-  </script>
+    });
+  }
+</script>
 </head>
 
 <body>
@@ -53,6 +53,7 @@
 
     <!-- Page Content -->
       <div id="page-content-wrapper">
+
 
   <script>
   function openGoogleMaps(){
@@ -87,7 +88,7 @@
 
   <!-- Main section of the page -->
   <main>
-    <div class="card" id="recipecard">
+    <div class="card">
 
         <div class="card-header">
           <!-- Code for displaying various recipes the user can click on to see what ingredients they need for that specific recipe -->
