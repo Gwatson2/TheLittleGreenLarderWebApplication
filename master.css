@@ -9,6 +9,7 @@ body {
     overflow-x: hidden;
 }
 
+/*centres text in the footer*/
 footer {
   text-align: center;
   position:absolute;
@@ -32,6 +33,7 @@ h3{
   /* Set the font for all of the h3 tags within the pages as 'Bungee Inline' */
   font-family: 'Bungee Inline', cursive;
   font-size: 20px;
+ text-align: left;
 }
 
 h4{
@@ -53,6 +55,7 @@ table {
 /* CSS for only the heading part in Home page */
 .aboutus{
   font-size:20px;
+    position: absolute;
 }
 
 /* CSS to centre the corresponding text */
