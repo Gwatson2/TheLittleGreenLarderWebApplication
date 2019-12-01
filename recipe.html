@@ -32,7 +32,7 @@
 <body>
 
 <!-- Use classList.add to the class 'fade' to the body tag -->
-  <script>
+<script>
   document.body.classList.add('fade');
 </script>
 
@@ -88,33 +88,27 @@
 
   <!-- Main section of the page -->
   <main>
-    <!-- Code for displaying various recipes the user can click on to see what ingredients they need for that specific recipe -->
-    <div class="container" id="recipe">
-      <ul class="list-group list-group-horizontal-lg">
-        <li class="list-inline border-0">
-          <button type="button" onclick="recipe1()" class="btn btn-outline-success">Sweet Potato & Chick Pea Curry</button>
-        </li>
-        <li class="list-inline border-0">
-          <button type="button" onclick="recipe2()" class="btn btn-outline-success">Garlic, Chilli & Veg Stir Fry</button>
-        </li>
-        <li class="list-inline border-0">
-          <button type="button" onclick="recipe3()" class="btn btn-outline-success">Vegan Chilli, Guacamole & Rice</button>
-        </li>
-        <li class="list-inline border-0">
-          <button type="button" onclick="recipe4()" class="btn btn-outline-success">Cajun Chickpea Burger & Wedges</button>
-        </li>
-        <li class="list-inline border-0">
-          <button type="button" onclick="recipe5()" class="btn btn-outline-success">Thai Veg Curry with Noodles</button>
-        </li>
-        <li class="list-inline border-0">
-          <button type="button" onclick="recipe6()" class="btn btn-outline-success">Vegan Chilli, Guacamole & Pearl Couscous</button>
-        </li>
-        <li class="list-inline border-0">
-          <button type="button" onclick="recipe7()" class="btn btn-outline-success">Falafel Burgers, Guacamole & Salad</button>
-        </li>
-      </ul>
+    <div class="card">
 
-      <div class="card">
+        <div class="card-header">
+          <!-- Code for displaying various recipes the user can click on to see what ingredients they need for that specific recipe -->
+
+          <div class="btn-group">
+            <button type="button" onclick="revertText()" class="btn btn-outline-success">Choose Recipe</button>
+            <button type="button" class="btn btn-outline-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item"><button type="button" onclick="recipe1()" class="btn btn-outline-success">Sweet Potato & Chick Pea Curry</button></a>
+              <a class="dropdown-item"><button type="button" onclick="recipe2()" class="btn btn-outline-success">Garlic, Chilli & Veg Stir Fry</button></a>
+              <a class="dropdown-item"><button type="button" onclick="recipe3()" class="btn btn-outline-success">Vegan Chilli, Guacamole & Rice</button></a>
+              <a class="dropdown-item"><button type="button" onclick="recipe4()" class="btn btn-outline-success">Cajun Chickpea Burger & Wedges</button></a>
+              <a class="dropdown-item"><button type="button" onclick="recipe5()" class="btn btn-outline-success">Thai Veg Curry with Noodles</button></a>
+              <a class="dropdown-item"><button type="button" onclick="recipe6()" class="btn btn-outline-success">Vegan Chilli, Guacamole & Pearl Couscous</button></a>
+              <a class="dropdown-item"><button type="button" onclick="recipe7()" class="btn btn-outline-success">Falafel Burgers, Guacamole & Salad</button></a>
+            </div>
+          </div>
+        </div>
 
         <div class="card-body">
           <!-- Brief description of what you can do to help live a more sustainable life and emphasise the recipes  -->
@@ -805,6 +799,12 @@
     document.getElementById("cherryTomatoes").innerHTML = cherryTomatoes;
   }
 
+  // Javascript for the recipe button so it is also able to revert text back to the default
+  function revertText(){
+    var x = document.getElementById("default");
+
+    x.innerHTML = "<p>When it comes to trying to live a sustainable life, some easy ways to do so are by shopping at a zero waste store (such as The Little Green Larder), buying loose fruit and veg and eating less meat. Here you will find some easy recipes that you can make from products you can purchase from The Little Green Larder which will help you to live a more sustainable life.</p>";
+  }
 
   // Javascript for the changing the contents of the card to the first recipe
   function recipe1() {
