@@ -62,7 +62,7 @@
     <script>
     function openGoogleMaps(){
         // If the user's current device is an iPhone / iPod / iPad then open the Google Maps app and display The Little Green Larder. This should work with Android devices despite not being specified.
-        // The decision to open an alternative app when the 'Map' nav is clicked was because on mobile, the original map didn't look great on the page.
+        // This will open the Google Maps app (or tab on Desktop). This allows the user to look at the position of The Little Green Larder compared to where they are currently, then once they close that the Map page will display all of the other zero waste shops available.
         if( (navigator.platform.indexOf("iPhone") != -1)
             || (navigator.platform.indexOf("iPod") != -1)
             || (navigator.platform.indexOf("iPad") != -1))
@@ -100,7 +100,7 @@
   <div id='map'></div>
 </div>
 </div>
-    </body>
+
   <!-- Use Javascript and the Mapbox API to display an interactive map that highlights the various zero-waste shops and services around Dundee, giving a brief description of each -->
     <script>
     // Link to unique access token to get full access to the Mapbox API
@@ -267,7 +267,7 @@
       // Add navigation control to the map, allowing the user to zoom in / out and set the map back to north facing
       map.addControl(new mapboxgl.NavigationControl());
     </script>
-
+</body>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
