@@ -7,7 +7,9 @@ var urlsToCache = [
   '/quiz.html',
   '/recipe.html',
   '/manifest.json',
-  '/master.css'
+  '/master.css',
+  '/images/littlegreenlardericon.png',
+  '/images/littlegreenlardericon2.png'
 ];
 
 self.addEventListener('install', function(event) {
