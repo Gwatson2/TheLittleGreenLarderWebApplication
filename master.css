@@ -454,13 +454,15 @@ padding-left: 40px;
 }
 
 
-/* CSS to help the website apply better for mobile interfaces */
+/* CSS to help the website apply better for mobile interfaces - height wise */
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 =======
+/* CSS to help the website better apply for mobile interfaces - width wise */
 @media (max-width: 991.98px) {
 
+/* CSS for the header element */
 #header{
   height:300;
 }
@@ -468,4 +470,3 @@ padding-left: 40px;
 
 
 }
-
