@@ -172,6 +172,10 @@ transition: margin .25s ease-out;
   margin-left: 0;
 }
 
+#navicon{
+  float: right;
+}
+
 @media (min-width: 768px) {
   #sidebar-wrapper {
     margin-left: 0;
