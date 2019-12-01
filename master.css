@@ -6,13 +6,7 @@ body {
   /* Set the opacity as normal and the transition to 7 seconds - meaning it will take 7 seconds of fading to get to normal opacity */
   opacity: 1;
   transition: 0.7s opacity;
-}
-
-/* Using the fade class created, set the opacity to 0 when the user first loads the page and use transition to create a smooth transition - set to 'none' as there is no need for any delays or any other properties that the transition property contains */
-/* Reference - https://alligator.io/js/simple-page-fade-in/ */
-body.fade {
-    opacity: 0;
-    transition: none;
+    overflow-x: hidden;
 }
 
 footer {
@@ -31,7 +25,6 @@ h2{
   /* Set the font for all of the h2 tags within the pages as 'Bungee Inline' */
   font-family: 'Bungee Inline', cursive;
   padding: 5px;
-  font-family: 'Bungee Inline', cursive;
 }
 
 h3{
@@ -111,7 +104,7 @@ table {
   height:600px;
   width:1175px;
 
-  margin-left:180px;
+  margin-left:20px;
   margin-top:20px;
 
   position: absolute;
@@ -119,12 +112,16 @@ table {
 
 /* CSS for the classes containing 'container' */
 .container{
-  padding-left:160px;
+  padding-left:30px;
 }
 
 /* CSS for the About Us section, mainly the description */
 .about{
   font-size:20px;
+}
+
+.sidebar-heading{
+  font-family: 'Bungee Inline', cursive;
 }
 
 /* CSS to specify what words are important in the Advice page*/
@@ -141,6 +138,52 @@ padding:0;
   color: #81CEA2;
 }
 
+#sidebar-wrapper {
+min-height: 100;
+margin-left: -15rem;
+-webkit-transition: margin .25s ease-out;
+-moz-transition: margin .25s ease-out;
+-o-transition: margin .25s ease-out;
+transition: margin .25s ease-out;
+}
+
+ {
+  background-color: #81CEA2;
+}
+
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
 /* CSS for the opening times sections*/
 #openingtimes {
   font-size: 12px;
@@ -149,6 +192,10 @@ padding:0;
 /* CSS for each nav item within the nav bar */
 #navitem{
   font-size: 25px;
+}
+
+#nesnav{
+  color: #329E62;
 }
 
 /* CSS for an image within the Advice page*/
@@ -197,7 +244,7 @@ padding:0;
 
 /* CSS for the two rows of images in the Home page */
 #images {
-    padding-left: 160px;
+    padding-left: 30px;
 }
 
 /* CSS for a section of advice in the Advice page */
@@ -225,7 +272,7 @@ background-color: #818181;
  height:100px;
  text-align: center;
  margin: 0;
-padding-left:160px;
+padding-left:30px;
 }
 
 }
@@ -275,7 +322,7 @@ padding-left:160px;
 #header{
   background-color: #329E62;
   height:100px;
-  padding-left: 190px;
+  padding-left: 90px;
 }
 
 /* CSS for the repurpose ID */
@@ -311,7 +358,7 @@ padding-left:160px;
 #quizhead{
 text-align: center;
 font-family: 'Bungee Inline', cursive;
- padding-left: 140px;
+ padding-left: 100px;
  padding-right: 100px;
 }
 
@@ -319,7 +366,7 @@ font-family: 'Bungee Inline', cursive;
 text-align: center;
   font-size: 15px;
   font-size: 50px;
-padding-left: 170px;
+padding-left: 40px;
 }
 
 .question{    //css for the quiz questions
@@ -375,7 +422,7 @@ padding-left: 170px;
 
 /*  */
 .main {
-  padding-left: 160px; /* Same as the width of the sidenav */
+  padding-left: 30px; /* Same as the width of the sidenav */
   font-size: 28px; /* Increased text to enable scrolling */
   padding: 0px 10px;
 }
