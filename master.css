@@ -65,6 +65,16 @@ table {
   background-color:#81CEA2;
 }
 
+/* CSS for Recipe Footer */
+.recipeBox {
+  margin-left:200px;
+  width:500px;
+  background-color:#ffffff;
+  opacity:0.6;
+  filter: alpha(opacity=60);
+  font-weight:bold;
+}
+
 /* CSS for the side nav */
 .sidenav {
   height: 100%;
@@ -360,6 +370,10 @@ text-align: center;
 font-family: 'Bungee Inline', cursive;
  padding-left: 100px;
  padding-right: 100px;
+}
+
+#recipecard{
+  padding-top: 25px;
 }
 
 .result{    // css for the result of the quiz

@@ -1,15 +1,15 @@
 var CACHE_NAME = 'littlegreenlarder';
 var urlsToCache = [
-  '/',
-  '/index.html',
-  '/advice.html',
-  '/map.html',
-  '/quiz.html',
-  '/recipe.html',
-  '/manifest.json',
-  '/master.css',
-  '/images/littlegreenlardericon.png',
-  '/images/littlegreenlardericon2.png'
+  './',
+  './index.html',
+  './advice.html',
+  './map.html',
+  './quiz.html',
+  './recipe.html',
+  './manifest.json',
+  './master.css',
+  './images/littlegreenlardericon.png',
+  './images/littlegreenlardericon2.png'
 ];
 
 self.addEventListener('install', function(event) {
