@@ -68,6 +68,7 @@
     function openGoogleMaps(){
         // If the user's current device is an iPhone / iPod / iPad then open the Google Maps app and display The Little Green Larder. This should work with Android devices despite not being specified.
         // This will open the Google Maps app (or tab on Desktop). This allows the user to look at the position of The Little Green Larder compared to where they are currently, then once they close that the Map page will display all of the other zero waste shops available.
+        // Reference https://stackoverflow.com/questions/18739436/how-to-create-a-link-for-all-mobile-devices-that-opens-google-maps-with-a-route
         if( (navigator.platform.indexOf("iPhone") != -1)
             || (navigator.platform.indexOf("iPod") != -1)
             || (navigator.platform.indexOf("iPad") != -1))
@@ -78,8 +79,7 @@
     </script>
 
 
-<!-- else
-    window.open("http://maps.google.com/maps?daddr=Little+Green+Larder,+Perth+Road,+Dundee&amp;ll="); -->
+
 
     <!-- The main section of the page -->
     <!-- The image and heading of the page couldn't be in the header for this specific page as there was more room needed for text -->
