@@ -215,6 +215,8 @@ transition: margin .25s ease-out;
   color: #329E62;
 }
 
+
+
 /* CSS for an image within the Advice page*/
 #adviceimg
 {
@@ -421,7 +423,7 @@ padding-left: 40px;
   margin-top: 40px;
   padding-left: 10px;
   padding-bottom: 200px;
-  margin-left: 60px;
+  margin-left: 250px;
   background-color: white;
 }
 
@@ -497,8 +499,6 @@ padding-left: 40px;
   align-items: left;
 padding:15;
 padding-right:90;
-
-
 }
 
 #plantpic{
@@ -507,20 +507,17 @@ margin-left:50;
 
 #txt1advice{
 padding-left: 30px;
-
 }
 
 #txt2advice{
 padding-left: 30px;
 padding-right: 30px;
 padding-right: 30px;
-
 }
 
 #txt3advice{
 padding-left: 30px;
 padding-right: 30px;
-
 }
 
 #collection{
@@ -538,6 +535,26 @@ padding-left: 30px;
 #upcevents{
   margin:30;
   padding: 30px;
+}
+
+p{
+  font-size: 10;
+}
+
+h1{
+
+}
+
+h2{
+font-size: 15;
+}
+
+h3{
+  font-size: 15;  
+}
+
+h4{
+    font-size: 11;
 }
 
 }
