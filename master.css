@@ -504,5 +504,11 @@ padding-right: 30px;
 
 }
 
+#collection{
+align-items: left;
+padding:15;
+margin-left:90;
+}
+
 
 }
