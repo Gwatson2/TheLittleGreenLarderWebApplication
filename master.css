@@ -412,8 +412,10 @@ font-family: 'Bungee Inline', cursive;
  padding-right: 100px;
 }
 
-#recipecard{
+.recipecard{
   padding-top: 25px;
+  padding: auto;
+  width: auto;
 }
 
 .result{    // css for the result of the quiz
