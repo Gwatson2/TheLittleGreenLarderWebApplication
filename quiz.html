@@ -42,11 +42,17 @@
         <a href="recipe.html" id="navitem" class="list-group-item list-group-item-action bg-light">Recipe</a>
         <a href="advice.html" id="navitem" class="list-group-item list-group-item-action bg-light">Advice</a>
       </div>
+        <a href="#" id="navitem" class="list-group-item list-group-item-action breaknav"></a>
       <div class="nav-link ml-3 my-1" id="nesnav">
                   <h3>Follow Us:</h3>
                   <a href="https://www.facebook.com/thelittlegreenlarder/" class="fab fa-facebook float-left fa-2x" id="fbicon"></a>
                   <a href="https://www.instagram.com/thegreenlarder/?hl=en" class="fab fa-instagram float-left fa-2x" id="ig"></a>
-              </div>
+                  <br>
+                  <br>
+    </div>
+    <div class="nav-link ml-3 my-1" id="nesnav">
+       <a class="btn btn-success" id="blogbtn" href="http://thelittlegreenblogger.com/index.php/home/" role="button">The Little Green Blog</a>
+    </div>
     </div>
 
     <!-- Page Content -->
@@ -94,12 +100,11 @@
       function buildQuiz() {
         const output = []; //place to store the HTML output
 
-        myQuestions.forEach((currentQuestion, questionNumber) => { // for each question...
-          // we'll want to store the list of answer choices
+        myQuestions.forEach((currentQuestion, questionNumber) => {
+          //store the list of answer choices
           const answers = [];
 
-          for (letter in currentQuestion.answers) {      // and for each available answer...
-            // ...add an HTML radio button
+          for (letter in currentQuestion.answers) {
             answers.push(
               `<label>
                 <input type="radio" name="question${questionNumber}" value="${letter}">
@@ -109,31 +114,28 @@
             );
           }
 
-          output.push(    // add this question and its answers to the output
+          output.push(
             `<div class="question"> ${currentQuestion.question} </div>
             <div class="answers"> ${answers.join("")} </div>`
           );
         });
 
-        // finally combine our output list into one string of HTML and put it on the page
         quizContainer.innerHTML = output.join("");
       }
 
-      function showResults() {
-        // gather answer containers from our quiz
+      function showResults() {  //function toshow the result of the quiz
         const answerContainers = quizContainer.querySelectorAll(".answers");
 
         // keep track of user's answers
         let numCorrect = 0;
 
-        // for each question...
         myQuestions.forEach((currentQuestion, questionNumber) => {
-          // find selected answer
+
           const answerContainer = answerContainers[questionNumber];
           const selector = `input[name=question${questionNumber}]:checked`;
           const userAnswer = (answerContainer.querySelector(selector) || {}).value;
 
-          // if answer is correct
+          //if the answer is correct
           if (userAnswer === currentQuestion.correctAnswer) {
             // add to the number of correct answers
             numCorrect++;
@@ -141,13 +143,13 @@
             // color the answers green
             answerContainers[questionNumber].style.color = "lightgreen";
           } else {
-            // if answer is wrong or blank
+            // if answer is wrong or unanswered
             // color the answers red
             answerContainers[questionNumber].style.color = "red";
           }
         });
 
-        // show number of correct answers out of total
+        // show number of correct answers out of total ()
         resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
       }
 
@@ -185,7 +187,7 @@
 
       buildQuiz();      // display quiz
 
-      submitButton.addEventListener("click", showResults); // when submit is pressed, show result
+      submitButton.addEventListener("click", showResults); // when submit button is pressed, show result
     })();
     </script>
 
