@@ -36,6 +36,11 @@
   </header>
   <body>
 
+    <!-- Use classList.add to the class 'fade' to the body tag -->
+    <script>
+      document.body.classList.add('fade');
+    </script>
+
     <div class="d-flex" id="wrapper">
 
     <!-- Code for the side navigation bar, link each nav item to their corresponding page -->
@@ -268,6 +273,14 @@
       // Add navigation control to the map, allowing the user to zoom in / out and set the map back to north facing
       map.addControl(new mapboxgl.NavigationControl());
     </script>
+
+    <!-- Use classList.remove() to stop the fade after the specified seconds -->
+      <script>
+      document.addEventListener("DOMContentLoaded", function(e) {
+        document.body.classList.remove('fade');
+      });
+      </script>
+      
 </body>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

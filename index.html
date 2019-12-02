@@ -32,7 +32,7 @@
 </head>
 
 <body>
-  
+
   <!-- Use classList.add to the class 'fade' to the body tag -->
   <script>
     document.body.classList.add('fade');
@@ -355,8 +355,12 @@
 </div>
 </div>
 
-
-
+<!-- Use classList.remove() to stop the fade after the specified seconds -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function(e) {
+    document.body.classList.remove('fade');
+  });
+  </script>
 
 </body>
 
