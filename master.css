@@ -479,7 +479,7 @@ padding-left: 40px;
 /* General CSS for the cards used */
 .card{
   padding:5px;
-  width: 18rem
+  width: 18rem;
 }
 
 /* General CSS for the text withint he cards */
