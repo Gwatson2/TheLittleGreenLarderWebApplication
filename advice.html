@@ -33,6 +33,11 @@
 
 <body>
 
+  <!-- Use classList.add to the class 'fade' to the body tag -->
+  <script>
+    document.body.classList.add('fade');
+  </script>
+
   <div class="d-flex" id="wrapper">
 
   <!-- Code for the side navigation bar, link each nav item to their corresponding page -->
@@ -64,7 +69,8 @@
   <script>
   function openGoogleMaps(){
       // If the user's current device is an iPhone / iPod / iPad then open the Google Maps app and display The Little Green Larder. This should work with Android devices despite not being specified.
-      // This will open the Google Maps app (or tab on Desktop). This allows the user to look at the position of The Little Green Larder compared to where they are currently, then once they close that the Map page will display all of the other zero waste shops available. 
+      // This will open the Google Maps app (or tab on Desktop). This allows the user to look at the position of The Little Green Larder compared to where they are currently, then once they close that the Map page will display all of the other zero waste shops available.
+      // Reference https://stackoverflow.com/questions/18739436/how-to-create-a-link-for-all-mobile-devices-that-opens-google-maps-with-a-route
       if( (navigator.platform.indexOf("iPhone") != -1)
           || (navigator.platform.indexOf("iPod") != -1)
           || (navigator.platform.indexOf("iPad") != -1))
@@ -122,13 +128,14 @@
         </div>
         <!-- Display text to give further zero-waste advice to user and images to keep them interested-->
         <div class="col-sm d-none d-lg-block" id="adviceimg2">
-          <img src="https://www.eveningtelegraph.co.uk/wp-content/uploads/sites/11/2019/07/KMil_Larder-014-846x564.jpg" alt="" width=550>
+          <img src="https://www.eveningtelegraph.co.uk/wp-content/uploads/sites/11/2019/07/KMil_Larder-014-846x564.jpg" alt="Owner standing in front of The Little Green Larder with dog" width=550>
         </div>
       </div>
 
       <div class="row">
         <div class="col-sm  d-none d-lg-block">
-          <img id="reuseimg"src="http://thelittlegreenblogger.com/wp-content/uploads/2019/09/SIOD9189-768x1152.jpg" alt="" height=450>
+          <img id="reuseimg"src="http://thelittlegreenblogger.com/wp-content/uploads/2019/09/SIOD9189-768x1152.jpg" alt="Packet of Bamboo Cutlery" height=450>
+
         </div>
         <div class="col-sm-8 container" id=txt1advice>
           <h3>1. Shop at a Zero Waste Store</h3>
@@ -169,15 +176,18 @@
           <p>Now, I’m not going to get into a big debate about meat. If you eat it, why not try 1 meat free meal a week, then 2. It is better for you and the environment and nowadays it’s so much easier. Plenty of restaurants have varied veggie and
             vegan menus now and the food is super tasty.</p>
         </div>
+
         <div class="col-sm-5" id="adviceimg">
           <img id="plantpic" src="https://scontent-lhr3-1.cdninstagram.com/vp/62972df7332568daafe6a0820fba5353/5E89AFB1/t51.2885-15/sh0.08/e35/s750x750/71227402_960941494263468_5065387511205819056_n.jpg?_nc_ht=scontent-lhr3-1.cdninstagram.com&_nc_cat=100"
-            width=400 alt="">
+            width=400 alt="Person fixing cactus plant in pot - dirty hands">
+
         </div>
       </div>
       <br>
       <div class="row">
         <div class="col-sm  d-none d-lg-block" >
-          <img id="dogpic" src="https://scontent-lhr3-1.cdninstagram.com/vp/be2fd1c77781635a501007af04b883d6/5E56E49F/t51.2885-15/sh0.08/e35/p750x750/23594608_190776908136497_1601889949479600128_n.jpg?_nc_ht=scontent-lhr3-1.cdninstagram.com&_nc_cat=105" alt="" width=300 height=430>
+          <img id="dogpic" src="https://scontent-lhr3-1.cdninstagram.com/vp/be2fd1c77781635a501007af04b883d6/5E56E49F/t51.2885-15/sh0.08/e35/p750x750/23594608_190776908136497_1601889949479600128_n.jpg?_nc_ht=scontent-lhr3-1.cdninstagram.com&_nc_cat=105" alt="Two dogs in autumn woods" width=300 height=430>
+
         </div>
         <div class="col-sm-8 container" id=txt4advice>
           <h3>7. Walk, Cycle or take the Bus</h3>
@@ -196,7 +206,7 @@
       </div>
       <br>
       <div class="row">
-        <div class="col-sm-8 container" id="txt3advice">
+        <div class="col-sm-8 container" id="txt3advice" style="background-color:#81CEA2;">
           <h3>9. Buy Second hand</h3>
           <p>Second hand doesn’t mean second best. You can get lots of amazing good- as-new things in charity shops, car boot sales and vintage fayres etc. This month I am blogging about second hand September to show that second hand fashion can be fun!</p>
           <a id="readmore" class="btn btn-outline-success" href="http://thelittlegreenblogger.com/index.php/2019/09/01/im-doing-second-hand-september/" role="button">read more.... </a>
@@ -206,8 +216,10 @@
 
         <p>I would love to know your top green living tips. Leave me a comment and let me know what you do at home or when you are out and about to lead a more eco friendly life.</p>
         </div>
+
         <div class="col-sm  d-none d-lg-block" >
-          <img id="bottleimg" src="http://thelittlegreenblogger.com/wp-content/uploads/2019/09/SIOD4827-768x1152.jpg" alt="bottleimage" height=450 width=300>
+          <img id="bottleimg" src="http://thelittlegreenblogger.com/wp-content/uploads/2019/09/SIOD4827-768x1152.jpg" alt="The Little Green Larder's own brand of flask" height=450 width=300>
+
         </div>
         </div>
           </div>
@@ -231,6 +243,12 @@
     </div>
   </main>
 
+  <!-- Use classList.remove() to stop the fade after the specified seconds -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function(e) {
+      document.body.classList.remove('fade');
+    });
+    </script>
 
 <!-- Footer of the page -->
 <footer>

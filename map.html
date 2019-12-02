@@ -36,6 +36,11 @@
   </header>
   <body>
 
+    <!-- Use classList.add to the class 'fade' to the body tag -->
+    <script>
+      document.body.classList.add('fade');
+    </script>
+
     <div class="d-flex" id="wrapper">
 
     <!-- Code for the side navigation bar, link each nav item to their corresponding page -->
@@ -63,6 +68,7 @@
     function openGoogleMaps(){
         // If the user's current device is an iPhone / iPod / iPad then open the Google Maps app and display The Little Green Larder. This should work with Android devices despite not being specified.
         // This will open the Google Maps app (or tab on Desktop). This allows the user to look at the position of The Little Green Larder compared to where they are currently, then once they close that the Map page will display all of the other zero waste shops available.
+        // Reference https://stackoverflow.com/questions/18739436/how-to-create-a-link-for-all-mobile-devices-that-opens-google-maps-with-a-route
         if( (navigator.platform.indexOf("iPhone") != -1)
             || (navigator.platform.indexOf("iPod") != -1)
             || (navigator.platform.indexOf("iPad") != -1))
@@ -267,6 +273,14 @@
       // Add navigation control to the map, allowing the user to zoom in / out and set the map back to north facing
       map.addControl(new mapboxgl.NavigationControl());
     </script>
+
+    <!-- Use classList.remove() to stop the fade after the specified seconds -->
+      <script>
+      document.addEventListener("DOMContentLoaded", function(e) {
+        document.body.classList.remove('fade');
+      });
+      </script>
+      
 </body>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

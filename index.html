@@ -33,6 +33,11 @@
 
 <body>
 
+  <!-- Use classList.add to the class 'fade' to the body tag -->
+  <script>
+    document.body.classList.add('fade');
+  </script>
+
     <div class="d-flex" id="wrapper">
 
     <!-- Code for the side navigation bar, link each nav item to their corresponding page -->
@@ -68,6 +73,7 @@
     function openGoogleMaps(){
         // If the user's current device is an iPhone / iPod / iPad then open the Google Maps app and display The Little Green Larder. This should work with Android devices despite not being specified.
         // This will open the Google Maps app (or tab on Desktop). This allows the user to look at the position of The Little Green Larder compared to where they are currently, then once they close that the Map page will display all of the other zero waste shops available.
+        // Reference https://stackoverflow.com/questions/18739436/how-to-create-a-link-for-all-mobile-devices-that-opens-google-maps-with-a-route
         if( (navigator.platform.indexOf("iPhone") != -1)
             || (navigator.platform.indexOf("iPod") != -1)
             || (navigator.platform.indexOf("iPad") != -1))
@@ -78,8 +84,7 @@
     </script>
 
 
-<!-- else
-    window.open("http://maps.google.com/maps?daddr=Little+Green+Larder,+Perth+Road,+Dundee&amp;ll="); -->
+
 
     <!-- The main section of the page -->
     <!-- The image and heading of the page couldn't be in the header for this specific page as there was more room needed for text -->
@@ -226,9 +231,14 @@
       <br>
     </div>
     <br>
-    <div class="Container-flex break">
 
+    <div class="vine">
+      <img src="vineLine.png" alt="Section Break - Vine" style="width:200px; height:50px;";>
     </div>
+
+    <!-- <div class="Container-flex break" img src="vineLine.png" alt="Section Break - Vine" style="width:200px; height:50px;";> -->
+
+    <!-- </div> -->
     <!-- Display an article about the shop to give the user more information from a different standpoint -->
     <div class="container" id="article">
       <div class="row">
@@ -250,9 +260,13 @@
         </div>
       </div>
     </div>
-    <div class="Container-flex break">
 
-    </div>
+
+      <img src="vineLine.png" alt="Section Break - Vine" style="display:block; margin-left:auto; margin-right:0%;width:200px;height:50px;transform: scaleX(-1) scaleY(-1);">
+
+    <!-- <div class="Container-flex break">
+ margin-left:1000px
+    </div> -->
     <br>
     <!-- Display contact informatio and the address of the shop so they're available to the user -->
     <div class="container" id="contact">
@@ -283,9 +297,14 @@
       </div>
     </div>
     <br>
-    <div class="Container-flex break">
 
+    <div class="vine">
+      <img src="vineLine.png" alt="Section Break - Vine" style="width:200px; height:50px;";>
     </div>
+
+    <!-- <div class="Container-flex break">
+
+    </div> -->
     <!-- Dislay the opening times of the shop to the user so they're available as well -->
     <div class="container" id="openingtimes">
       <br>
@@ -336,8 +355,12 @@
 </div>
 </div>
 
-
-
+<!-- Use classList.remove() to stop the fade after the specified seconds -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function(e) {
+    document.body.classList.remove('fade');
+  });
+  </script>
 
 </body>
 
