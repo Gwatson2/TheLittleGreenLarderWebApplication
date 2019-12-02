@@ -78,6 +78,15 @@ table {
   font-weight:bold;
 }
 
+.adviceBox{
+  margin-left:auto;
+  margin-right:auto;
+  width:500px;
+  background-color:#ffffff;
+  opacity:0.6;
+  filter: alpha(opacity=60);
+  font-weight:bold;
+}
 /* CSS for the side nav */
 .sidenav {
   height: 100%;
@@ -269,13 +278,14 @@ transition: margin .25s ease-out;
 
 /* CSS for a section of advice in the Advice page */
 #txt2advice{
-background-color: #818181;
+background-color: #329E62;
   padding-left: 10;
 }
 
 /* CSS for a section of advice in the Advice page */
 #txt3advice{
     padding-left: 10;
+    height:400px;
 }
 
 /* CSS for a section of advice in the Advice page */
@@ -478,13 +488,15 @@ padding-left: 40px;
 }
 
 
-/* CSS to help the website apply better for mobile interfaces */
+/* CSS to help the website apply better for mobile interfaces - height wise */
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 =======
+/* CSS to help the website better apply for mobile interfaces - width wise */
 @media (max-width: 991.98px) {
 
+/* CSS for the header element */
 #header{
   height:300;
 }
@@ -509,6 +521,7 @@ margin-left:50;
 padding-left: 30px;
 }
 
+
 #txt2advice{
 padding-left: 30px;
 padding-right: 30px;
@@ -531,6 +544,7 @@ padding-left: 30px;
   margin:30;
   padding: 30px;
 }
+
 
 #upcevents{
   margin:30;
@@ -558,3 +572,9 @@ h4{
 }
 
 }
+
+/* CSS for vine images */
+.vine{
+  display:block;
+  }
+
