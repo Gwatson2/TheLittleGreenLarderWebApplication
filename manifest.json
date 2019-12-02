@@ -1,19 +1,7 @@
 {
   "name": "Little Green Larder Mobile Web App",
-  "short_name": "Little Green Larder",
-  "display": "standalone",
-  "scope": "/",
+  "short_name": "The Little Green Larder",
+  "display": "fullscreen",
   "background_color": "#329E62",
   "theme_color": "#111"
-  "icons": [
-    {
-      "src": "./images/littlegreenlardericon.png",
-      "type": "image/png",
-      "sizes": "192 x 192"
-    },{
-      "src": "./images/littlegreenlardericon2.png",
-      "type": "image/png",
-      "sizes": "512 x 512"
-    }
-  ],
 }
