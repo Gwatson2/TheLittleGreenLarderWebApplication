@@ -50,7 +50,7 @@
         <img src="https://user-images.githubusercontent.com/55393692/68961692-d8c81180-07ca-11ea-8d81-fcbc7497e7cf.png" alt="" height=30 id="navicon"></div>
         <div class="list-group list-group-flush">
           <a href="index.html" id="navitem" class="list-group-item list-group-item-action bg-light">Home</a>
-          <a href="map.html" id="navitem" class="list-group-item list-group-item-action bg-light" style="cursor: pointer;" onclick="openGoogleMaps()">Map</a>
+          <a href="map.html" id="navitem" class="list-group-item list-group-item-action bg-light googlemap"  onclick="openGoogleMaps()">Map</a>
           <a href="recipe.html" id="navitem" class="list-group-item list-group-item-action bg-light">Recipe</a>
           <a href="advice.html" id="navitem" class="list-group-item list-group-item-action bg-light">Advice</a>
         </div>
@@ -106,7 +106,7 @@
     </div>
 
     <!-- Introduction text to map so the user knows what the map is actually for -->
-    <h3 style="padding-left:200px; padding-top:10px;">Here are a few locations within Dundee who participate in being zero-waste:</h3>
+    <h3 id="maptxt">Here are a few locations within Dundee who participate in being zero-waste:</h3>
 
 
   <div id='map'></div>
@@ -286,7 +286,7 @@
         document.body.classList.remove('fade');
       });
       </script>
-      
+
 </body>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
