@@ -160,6 +160,10 @@ padding:0;
   color: #81CEA2;
 }
 
+.googlemap{
+  cursor: pointer;
+}
+
 #sidebar-wrapper {
 min-height: 100;
 margin-left: -15rem;
@@ -286,7 +290,9 @@ background-color: #329E62;
 #txt3advice{
     padding-left: 10;
     height:400px;
+    background-color:#81CEA2;
 }
+
 
 /* CSS for a section of advice in the Advice page */
 #txt4advice{
@@ -475,6 +481,7 @@ padding-left: 40px;
 /* General CSS for the cards used */
 .card{
   padding:5px;
+  width: 18rem;
 }
 
 /* General CSS for the text withint he cards */
@@ -533,6 +540,25 @@ padding-right: 30px;
 #txt3advice{
 padding-left: 30px;
 padding-right: 30px;
+}
+
+#vine{
+  width:200px;
+  height:50px;
+}
+
+#vineline{
+display:block;
+margin-left:auto;
+margin-right:0%;
+width:200px;
+height:50px;
+transform: scaleX(-1) scaleY(-1);
+}
+
+#maptxt{
+padding-left:200px;
+padding-top:10px;
 }
 
 #collection{
