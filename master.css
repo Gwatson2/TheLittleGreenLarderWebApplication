@@ -324,9 +324,18 @@ padding-left:30px;
   height:270px;
 }
 
+#blogbtn{
+background-color:#81CEA2;
+border: none;
+}
+
 /* CSS for the text below the article's image */
 #alerttext{
   font-size: 12px;
+}
+
+.breaknav{
+  height:75;
 }
 
 /*css for the read more button in NO.9 of the zero-waste tips */
@@ -514,11 +523,21 @@ padding-right: 30px;
 }
 
 #collection{
-align-items: left;
+align-items: center;
 padding:15;
 margin-left:90;
+padding-left: 30px;
+}
+
+.card{
+  margin:30;
+  padding: 30px;
+}
+
+#upcevents{
+  margin:30;
+  padding: 30px;
 }
 
 
 }
-
