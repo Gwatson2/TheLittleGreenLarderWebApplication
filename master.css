@@ -275,13 +275,14 @@ transition: margin .25s ease-out;
 
 /* CSS for a section of advice in the Advice page */
 #txt2advice{
-background-color: #818181;
+background-color: #329E62;
   padding-left: 10;
 }
 
 /* CSS for a section of advice in the Advice page */
 #txt3advice{
     padding-left: 10;
+    height:400px;
 }
 
 /* CSS for a section of advice in the Advice page */
