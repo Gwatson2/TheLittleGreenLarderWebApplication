@@ -408,6 +408,8 @@ font-family: 'Bungee Inline', cursive;
 
 #recipecard{
   padding-top: 25px;
+  padding: auto;
+  width: auto;
 }
 
 .result{    // css for the result of the quiz
@@ -564,7 +566,7 @@ font-size: 15;
 }
 
 h3{
-  font-size: 15;  
+  font-size: 15;
 }
 
 h4{
@@ -577,4 +579,3 @@ h4{
 .vine{
   display:block;
   }
-
