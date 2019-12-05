@@ -36,6 +36,11 @@
   </header>
   <body>
 
+    <!-- Use classList.add to the class 'fade' to the body tag -->
+    <script>
+      document.body.classList.add('fade');
+    </script>
+
     <div class="d-flex" id="wrapper">
 
     <!-- Code for the side navigation bar, link each nav item to their corresponding page -->
@@ -45,15 +50,21 @@
         <img src="https://user-images.githubusercontent.com/55393692/68961692-d8c81180-07ca-11ea-8d81-fcbc7497e7cf.png" alt="" height=30 id="navicon"></div>
         <div class="list-group list-group-flush">
           <a href="index.html" id="navitem" class="list-group-item list-group-item-action bg-light">Home</a>
-          <a href="map.html" id="navitem" class="list-group-item list-group-item-action bg-light" style="cursor: pointer;" onclick="openGoogleMaps()">Map</a>
+          <a href="map.html" id="navitem" class="list-group-item list-group-item-action bg-light googlemap"  onclick="openGoogleMaps()">Map</a>
           <a href="recipe.html" id="navitem" class="list-group-item list-group-item-action bg-light">Recipe</a>
           <a href="advice.html" id="navitem" class="list-group-item list-group-item-action bg-light">Advice</a>
         </div>
+          <a href="#" id="navitem" class="list-group-item list-group-item-action breaknav"></a>
         <div class="nav-link ml-3 my-1" id="nesnav">
                     <h3>Follow Us:</h3>
                     <a href="https://www.facebook.com/thelittlegreenlarder/" class="fab fa-facebook float-left fa-2x" id="fbicon"></a>
                     <a href="https://www.instagram.com/thegreenlarder/?hl=en" class="fab fa-instagram float-left fa-2x" id="ig"></a>
-                </div>
+                    <br>
+                    <br>
+      </div>
+      <div class="nav-link ml-3 my-1" id="nesnav">
+         <a class="btn btn-success" id="blogbtn" href="http://thelittlegreenblogger.com/index.php/home/" role="button">The Little Green Blog</a>
+      </div>
       </div>
 
       <!-- Page Content -->
@@ -62,7 +73,8 @@
     <script>
     function openGoogleMaps(){
         // If the user's current device is an iPhone / iPod / iPad then open the Google Maps app and display The Little Green Larder. This should work with Android devices despite not being specified.
-        // The decision to open an alternative app when the 'Map' nav is clicked was because on mobile, the original map didn't look great on the page.
+        // This will open the Google Maps app (or tab on Desktop). This allows the user to look at the position of The Little Green Larder compared to where they are currently, then once they close that the Map page will display all of the other zero waste shops available.
+        // Reference https://stackoverflow.com/questions/18739436/how-to-create-a-link-for-all-mobile-devices-that-opens-google-maps-with-a-route
         if( (navigator.platform.indexOf("iPhone") != -1)
             || (navigator.platform.indexOf("iPod") != -1)
             || (navigator.platform.indexOf("iPad") != -1))
@@ -94,13 +106,13 @@
     </div>
 
     <!-- Introduction text to map so the user knows what the map is actually for -->
-    <h3 style="padding-left:200px; padding-top:10px;">Here are a few locations within Dundee who participate in being zero-waste:</h3>
+    <h3 id="maptxt">Here are a few locations within Dundee who participate in being zero-waste:</h3>
 
 
   <div id='map'></div>
 </div>
 </div>
-    </body>
+
   <!-- Use Javascript and the Mapbox API to display an interactive map that highlights the various zero-waste shops and services around Dundee, giving a brief description of each -->
     <script>
     // Link to unique access token to get full access to the Mapbox API
@@ -268,6 +280,14 @@
       map.addControl(new mapboxgl.NavigationControl());
     </script>
 
+    <!-- Use classList.remove() to stop the fade after the specified seconds -->
+      <script>
+      document.addEventListener("DOMContentLoaded", function(e) {
+        document.body.classList.remove('fade');
+      });
+      </script>
+
+</body>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

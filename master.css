@@ -78,6 +78,15 @@ table {
   font-weight:bold;
 }
 
+.adviceBox{
+  margin-left:auto;
+  margin-right:auto;
+  width:500px;
+  background-color:#ffffff;
+  opacity:0.6;
+  filter: alpha(opacity=60);
+  font-weight:bold;
+}
 /* CSS for the side nav */
 .sidenav {
   height: 100%;
@@ -115,12 +124,12 @@ table {
 /* CSS for the Mapbox feature */
 #map{
   height:600px;
-  width:1175px;
+  width:100%;
 
-  margin-left:20px;
+
   margin-top:20px;
 
-  position: absolute;
+  display:inline-block;
 }
 
 /* CSS for the classes containing 'container' */
@@ -149,6 +158,10 @@ padding:0;
 /* CSS for the links available to click in the Advice page */
 .links{
   color: #81CEA2;
+}
+
+.googlemap{
+  cursor: pointer;
 }
 
 #sidebar-wrapper {
@@ -215,6 +228,8 @@ transition: margin .25s ease-out;
   color: #329E62;
 }
 
+
+
 /* CSS for an image within the Advice page*/
 #adviceimg
 {
@@ -248,6 +263,7 @@ transition: margin .25s ease-out;
   padding: 10px;
 }
 
+
 /* CSS for the list seen in the Advice page*/
 #advicelist{
   padding:2px;
@@ -266,14 +282,17 @@ transition: margin .25s ease-out;
 
 /* CSS for a section of advice in the Advice page */
 #txt2advice{
-background-color: #818181;
+background-color: #329E62;
   padding-left: 10;
 }
 
 /* CSS for a section of advice in the Advice page */
 #txt3advice{
     padding-left: 10;
+    height:400px;
+    background-color:#81CEA2;
 }
+
 
 /* CSS for a section of advice in the Advice page */
 #txt4advice{
@@ -323,9 +342,18 @@ padding-left:30px;
   height:270px;
 }
 
+#blogbtn{
+background-color:#81CEA2;
+border: none;
+}
+
 /* CSS for the text below the article's image */
 #alerttext{
   font-size: 12px;
+}
+
+.breaknav{
+  height:75;
 }
 
 /*css for the read more button in NO.9 of the zero-waste tips */
@@ -384,8 +412,10 @@ font-family: 'Bungee Inline', cursive;
  padding-right: 100px;
 }
 
-#recipecard{
+.recipecard{
   padding-top: 25px;
+  padding: auto;
+  width: auto;
 }
 
 .result{    // css for the result of the quiz
@@ -393,6 +423,10 @@ text-align: center;
   font-size: 15px;
   font-size: 50px;
 padding-left: 40px;
+}
+
+.quizbg{
+  background-color:#81CEA2;
 }
 
 .question{    //css for the quiz questions
@@ -407,58 +441,167 @@ padding-left: 40px;
   margin-top: 40px;
   padding-left: 10px;
   padding-bottom: 200px;
-  margin-left: 340px;
+  margin-left: 250px;
   background-color: white;
 }
 
-/*  */
+/* The results are contained in this container */
 #resultcon{
   font-family: 'Bungee Inline', cursive;
   background-color: #329E62;
-  margin-left:340px;
+  margin-left:60px;
   width:700px;
 }
 
+
 /*  */
+#submit{
+  margin-left: 210px;
+}
+
+/*  */
+/* CSS for the Quiz itself */
+
 #quiz{
   padding-left: 200px;
   padding-right: 200px;
   padding-bottom: 0;
 }
 
-/*  */
+/* CSS for the text within the Quiz */
 .quiz{
   text-align: center;
 }
 
-/*  */
+/* CSS for the text within the second recipe */
 .second{
   font-size: 16;
 }
 
-/*  */
+/* General CSS for the cards used */
 .card{
   padding:5px;
+  width: 18rem;
 }
 
-/*  */
+/* General CSS for the text withint he cards */
 .card-text{
   font-size:14px;
 }
 
-/*  */
+/* CSS for the main parts of some of the pages */
 .main {
   padding-left: 30px; /* Same as the width of the sidenav */
   font-size: 28px; /* Increased text to enable scrolling */
   padding: 0px 10px;
 }
 
+
+/* CSS to help the website apply better for mobile interfaces - height wise */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+=======
+/* CSS to help the website better apply for mobile interfaces - width wise */
 @media (max-width: 991.98px) {
 
+/* CSS for the header element */
 #header{
+  height:300;
+}
+
+#endadvice{
   height:300;
 }
 
 
 
+#reuseimg{
+  align-items: left;
+padding:15;
+padding-right:90;
 }
+
+#plantpic{
+margin-left:50;
+}
+
+#txt1advice{
+padding-left: 30px;
+}
+
+
+#txt2advice{
+padding-left: 30px;
+padding-right: 30px;
+padding-right: 30px;
+}
+
+#txt3advice{
+padding-left: 30px;
+padding-right: 30px;
+}
+
+#vine{
+  width:200px;
+  height:50px;
+}
+
+#vineline{
+display:block;
+margin-left:auto;
+margin-right:0%;
+width:200px;
+height:50px;
+transform: scaleX(-1) scaleY(-1);
+}
+
+#maptxt{
+padding-left:200px;
+padding-top:10px;
+}
+
+#collection{
+align-items: center;
+padding:15;
+margin-left:90;
+padding-left: 30px;
+}
+
+.card{
+  margin:30;
+  padding: 30px;
+}
+
+
+#upcevents{
+  margin:30;
+  padding: 30px;
+}
+
+p{
+  font-size: 10;
+}
+
+h1{
+
+}
+
+h2{
+font-size: 15;
+}
+
+h3{
+  font-size: 15;
+}
+
+h4{
+    font-size: 11;
+}
+
+}
+
+/* CSS for vine images */
+.vine{
+  display:block;
+  }
